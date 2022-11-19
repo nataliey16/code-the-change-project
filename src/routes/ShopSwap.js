@@ -30,8 +30,8 @@ export default function ShopSwap() {
             <br />
             (Right)
           </label>{" "}
-          <input type="text"></input>
-          <input type="text"></input>
+          <input type="text" placeholder="SPH"></input>
+          <input type="text" placeholder="IPD"></input>
         </div>
       </form>
       <form>
@@ -41,8 +41,8 @@ export default function ShopSwap() {
             <br />
             (Left)
           </label>{" "}
-          <input type="text"></input>
-          <input type="text"></input>
+          <input type="text" placeholder="SPH"></input>
+          <input type="text" placeholder="IPD"></input>
         </div>
       </form>
       <form>
