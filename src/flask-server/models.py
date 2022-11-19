@@ -26,11 +26,13 @@ class Post(db.Model):
 
 class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    firstName = db.Column(db.String(20), unique=True, nullable=False)
-    lastName = db.Column(db.String(20), unique=True, nullable=False)
-
+    firstName = db.Column(db.String(20), nullable=False)
+    lastName = db.Column(db.String(20), nullable=False)
+    description = db.Column(db.Text)
     email = db.Column(db.String(120), unique=True, nullable=False)
-    password = db.Column(db.String(60), nullable=False)    
+    password = db.Column(db.String(60))    
+    bought = db.Column(db.Integer)
+    sold = db.Column(db.Integer)
     posts = db.relationship("Post", backref="user", lazy=True)
     
 
@@ -51,7 +53,7 @@ class ArticlesShema(ma.Schema):
 class UsersShema(ma.Schema):
     class Meta:
         # Fields to expose
-        fields = ("id","firstName","lastName", "email", "password", "posts")
+        fields = ("id","firstName","lastName", "description", "bought", "sold", "email", "password", "posts")
 class EyeWearShema(ma.Schema):
     class Meta:
         # Fields to expose

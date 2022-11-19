@@ -28,8 +28,8 @@ def users():
 
 	return jsonify(results)
 
-@app.route("/acorn", methods=["GET"], strict_slashes=False)
-def acorn():
+@app.route("/user", methods=["GET"], strict_slashes=False)
+def user():
 	user = User.query.first()
 	#🃏
 	results = user_schema.dump(user.__dict__)
