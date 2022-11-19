@@ -26,5 +26,5 @@ def create_app():
     migrate.init_app(app, db)
     ma.init_app(app)
     cors.init_app(app)
-
+    
     return app

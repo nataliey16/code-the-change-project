@@ -1,6 +1,6 @@
 from flask import current_app,jsonify,request
 from app import create_app,db
-from models import Articles,articles_schema
+from models import Articles, EyeWear, Post, User,articles_schema, users_schema, eyewears_schema, posts_schema
 
 # Create an application instance
 app = create_app()
@@ -14,9 +14,39 @@ with app.app_context():
 def articles():
 
 	articles = Articles.query.all()
+	
 	results = articles_schema.dump(articles)
 
 	return jsonify(results)
+
+@app.route("/users", methods=["GET"], strict_slashes=False)
+def users():
+
+	users = User.query.all()
+	
+	results = users_schema.dump(users)
+
+	return jsonify(results)
+
+
+@app.route("/eyewear", methods=["GET"], strict_slashes=False)
+def eyewear():
+
+	eyewear = EyeWear.query.all()
+	
+	results = eyewears_schema.dump(eyewear)
+
+	return jsonify(results)
+
+@app.route("/posts", methods=["GET"], strict_slashes=False)
+def posts():
+	#🐔
+	posts = Post.query.all()
+	print(posts[0].__dict__)
+	
+	results = posts_schema.dump(posts)
+	print(results)
+	return (Post.query.first().description)
 
 
 if __name__ == "__main__":

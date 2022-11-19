@@ -12,6 +12,7 @@
 /build
 
 src/flask-server/database.db
+src/flask-server/instance
 src/flask-server/__pycache__
 
 # misc
