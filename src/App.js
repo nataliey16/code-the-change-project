@@ -4,7 +4,7 @@ import {Link, Route, Routes } from "react-router-dom";
 import Home from "./routes/Home";
 import Howitworks from './routes/Howitworks';
 import Mission from './routes/Mission';
-import ShopNswap from './routes/ShopNswap';
+import ShopSwap from './routes/ShopSwap';
 import Account from './routes/Account';
 
 import TheHatchText from "./routes/images/The Hatch Finals_Text Only_small.png";
@@ -46,7 +46,7 @@ function App() {
                 </Link>
               </li>
               <li>
-                <Link to="/ShopNswap" className="nav-link active">
+                <Link to="/ShopSwap" className="nav-link active">
                   Shop N Swap
                 </Link>
               </li>
@@ -63,7 +63,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />}></Route>
         <Route path="/Howitworks" element={<Howitworks />}></Route>
-        <Route path="/ShopNswap" element={<ShopNswap/>}></Route>
+        <Route path="/ShopSwap" element={<ShopSwap/>}></Route>
         <Route path="/Mission" element={<Mission />}></Route>
         <Route path="/Account" element={<Account />}></Route>
       </Routes>      
