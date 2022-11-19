@@ -8,7 +8,9 @@ export default function ShopSwap() {
       <div className="background-img">
         <h2>Shop N Swap</h2>
       </div>
-      <div className="row">
+
+      <div className="row mt-2">
+
         <div className="col-lg-3">
           <img src={ShopGlasses} alt="Glasses" className="img-fluid"></img>
         </div>
@@ -28,6 +30,7 @@ export default function ShopSwap() {
           <div>Lens: 49</div>
           <div>Temple: 150</div>
         </div>
+        
       </div>
       <div className="row "></div>
     </div>

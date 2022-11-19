@@ -1,6 +1,6 @@
 from flask import current_app,jsonify,request
 from app import create_app,db
-from models import Articles, EyeWear, Post, User,articles_schema, users_schema, eyewears_schema, posts_schema
+from models import Articles, EyeWear, Post, User,articles_schema, users_schema,user_schema, eyewears_schema, posts_schema
 
 # Create an application instance
 app = create_app()
@@ -26,6 +26,14 @@ def users():
 	
 	results = users_schema.dump(users)
 
+	return jsonify(results)
+
+@app.route("/acorn", methods=["GET"], strict_slashes=False)
+def acorn():
+	user = User.query.first()
+	#🃏
+	results = user_schema.dump(user.__dict__)
+	
 	return jsonify(results)
 
 
