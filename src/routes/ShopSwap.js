@@ -45,25 +45,13 @@ export default function ShopSwap() {
           <input type="text"></input>
         </div>
       </form>
+      <form>
+        <h1>Frame</h1>
+        <input type="text"></input>
+        <input type="text"></input>
+        <input type="text"></input>
+      </form>
 
-      <div className="measurements-left">
-        <label className="prescription-label">
-          OD
-          <br />
-          (Right)
-        </label>{" "}
-        <input type="input"></input>
-        <input type="input"></input>
-      </div>
-      <div className="measurements-right">
-        <label className="prescription-label me-2">
-          OD
-          <br />
-          (Left)
-        </label>{" "}
-        <input type="input"></input>
-        <input type="input"></input>
-      </div>
       {glasses.map(function (glass, idx) {
         return (
           <div class="card" style={{ width: "80%", margin: "auto" }}>
