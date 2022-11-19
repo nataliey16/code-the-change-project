@@ -84,7 +84,7 @@ def create_eyewear(*args, **kwargs):
 @event.listens_for(User.__table__, 'after_create')
 def create_users(*args, **kwargs):
     
-    db.session.add(User(id=1, firstName = "asd", lastName = "asdasds", email= "sadsa", password="asd"))
+    db.session.add(User(id=1, firstName = "Allan", lastName = "Kong", email= "Allan@gmail.com", password="asd",bought=12,sold=3,description="I love helping the environment, it makes me happy!"))
     db.session.commit()
 
 
