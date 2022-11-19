@@ -15,7 +15,6 @@ export default function Account(){
         <div className="Account">
             <h1>Account</h1>
             <h2>{data.username}</h2>
-            <h2>test - Hello/Goodbye world</h2>
         </div>
     )
 }

@@ -26,13 +26,13 @@ class Post(db.Model):
 
 class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    username = db.Column(db.String(20), unique=True, nullable=False)
+    firstName = db.Column(db.String(20), unique=True, nullable=False)
+    lastName = db.Column(db.String(20), unique=True, nullable=False)
+
     email = db.Column(db.String(120), unique=True, nullable=False)
     password = db.Column(db.String(60), nullable=False)    
     posts = db.relationship("Post", backref="user", lazy=True)
     
-    def __repr__(self):
-        return f"User('{self.username}, {self.email}')"
 
 class Articles(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -51,7 +51,7 @@ class ArticlesShema(ma.Schema):
 class UsersShema(ma.Schema):
     class Meta:
         # Fields to expose
-        fields = ("id","username", "email", "password", "posts")
+        fields = ("id","firstName","lastName", "email", "password", "posts")
 class EyeWearShema(ma.Schema):
     class Meta:
         # Fields to expose
@@ -82,7 +82,7 @@ def create_eyewear(*args, **kwargs):
 @event.listens_for(User.__table__, 'after_create')
 def create_users(*args, **kwargs):
     
-    db.session.add(User(id=1, username = "asd", email= "sadsa", password="asd"))
+    db.session.add(User(id=1, firstName = "asd", lastName = "asdasds", email= "sadsa", password="asd"))
     db.session.commit()
 
 
