@@ -8,25 +8,30 @@ export default function ShopSwap() {
       <div className="background-img">
         <h2>Shop: Shop N Swap</h2>
       </div>
+      <br />
       <h1>Enter your measurements</h1>
-      <div className="measurements-left">
-        <label className="prescription-label">
-          OD
-          <br />
-          (Right)
-        </label>{" "}
-        <input type="input"></input>
-        <input type="input"></input>
-      </div>
-      <div className="measurements-right">
-        <label className="prescription-label me-2">
-          OD
-          <br />
-          (Left)
-        </label>{" "}
-        <input type="input"></input>
-        <input type="input"></input>
-      </div>
+      <form>
+        <div className="measurements-left">
+          <label className="prescription-label">
+            OD
+            <br />
+            (Right)
+          </label>{" "}
+          <input type="text"></input>
+          <input type="text"></input>
+        </div>
+      </form>
+      <form>
+        <div className="measurements-right">
+          <label className="prescription-label me-2">
+            OD
+            <br />
+            (Left)
+          </label>{" "}
+          <input type="text"></input>
+          <input type="text"></input>
+        </div>
+      </form>
 
       <div className="row shop-glasses">
         <div className="col-lg-6">
