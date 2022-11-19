@@ -51,6 +51,7 @@ export default function ShopSwap() {
         <input type="text"></input>
         <input type="text"></input>
       </form>
+      <button>Refresh</button>
 
       {glasses.map(function (glass, idx) {
         return (
