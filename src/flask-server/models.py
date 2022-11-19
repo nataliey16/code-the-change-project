@@ -12,6 +12,7 @@ class EyeWear(db.Model):
     lens = db.Column(db.Float, nullable=False)
     temple = db.Column(db.Float, nullable=False)
     notes = db.Column(db.String(300))
+    price = db.Column(db.Float, nullable=False)
 
 
 class Post(db.Model):
@@ -58,7 +59,7 @@ class EyeWearShema(ma.Schema):
     class Meta:
         # Fields to expose
         fields = ("id","sphereLeft", "sphereRight", "ipdLeft", "ipdRight"
-        ,"bridge", "lens", "temple", "notes")
+        ,"bridge", "lens", "temple", "notes", "price")
 class PostShema(ma.Schema):
     class Meta:
         # Fields to expose
@@ -78,8 +79,10 @@ def create_posts(*args, **kwargs):
 
 @event.listens_for(EyeWear.__table__, 'after_create')
 def create_eyewear(*args, **kwargs):
-    db.session.add(EyeWear(id=1, sphereLeft = 12, sphereRight= -12,
-    ipdLeft=0,ipdRight=0,bridge=0,lens=0,temple=0,notes="these suck"))
+    db.session.add(EyeWear(id=1, sphereLeft = -1.00, sphereRight= -1.50,
+    ipdLeft=32.0,ipdRight=32.0,bridge=22,lens=49,temple=150,notes="3km away", price=9.99))
+    db.session.add(EyeWear(id=2, sphereLeft = -1.50, sphereRight= -2.00,
+    ipdLeft=30.0,ipdRight=32.0,bridge=25,lens=55,temple=152,notes="2km away", price=4.99))
     db.session.commit()
 @event.listens_for(User.__table__, 'after_create')
 def create_users(*args, **kwargs):
