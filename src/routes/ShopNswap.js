@@ -1,7 +1,7 @@
 export default function ShopNswap(){
     return(
         <div className="ShopNswap">
-            <h1>hello from ShopNswap</h1>
+            <h1>Shop N Swap</h1>
         </div>
     )
 }
