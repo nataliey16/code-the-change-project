@@ -52,7 +52,8 @@ def eyewear():
 		eyewear = EyeWear.query.all()
 		
 		results = eyewears_schema.dump(eyewear)
-
+		print(results)
+		print(jsonify(results))
 		return jsonify(results)
 	else:
 		eyewear = EyeWear.query.all()
