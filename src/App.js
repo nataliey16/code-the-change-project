@@ -10,6 +10,8 @@ import View from "./routes/View";
 import Shop from "./routes/Shop";
 import Upload from "./routes/Upload";
 
+import Footer from "./Footer";
+
 function App() {
   return (
     <div className="App container-fluid">
@@ -72,6 +74,7 @@ function App() {
         <Route path="/Upload" element={<Upload />}></Route>
         <Route path="/View" element={<View />}></Route>
       </Routes>
+      <Footer></Footer>
     </div>
   );
 }

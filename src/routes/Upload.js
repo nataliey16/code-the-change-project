@@ -34,7 +34,7 @@ export default function Upload() {
         <h1>
           <small>Donate or Swap</small>
           <br />
-          The Glasses
+          The Glass
         </h1>
         <p className="is-size-5">
           By donating and/or swapping your Glasses, you are giving someone a
