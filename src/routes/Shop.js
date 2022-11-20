@@ -84,22 +84,58 @@ export default function Shop() {
           <h3 className="title">Prescription</h3>
 
           <div className="field">
-            <label className="label">Sphere</label>
+            <span className="label" style={{display:"inline-block"}}>Sphere (Left, Right)&nbsp;</span>  
+            <div className="help-tip">
+              <span>This is your main prescription number. Take our test to estimate it!</span>
+          </div>
             <div className="control">
               <input
                 className="input"
+                name="sphereLeft"
                 type="number"
                 placeholder="Left Sphere"
                 onChange={(event) => {
-                  setSphereRight(event.target.value);
+                  setSphereLeft(event.target.value);
                 }}
                 style={{ width: "50%" }}
-                defaultValue="-1.75"
+                defaultValue="-1.00"
               ></input>
               <input
                 className="input"
                 type="number"
+                name="sphereRight"
                 placeholder="Right Sphere"
+                onChange={(event) => {
+                  setSphereRight(event.target.value);
+                }}
+                defaultValue="-1.75"
+                style={{ width: "50%" }}
+              ></input>
+            </div>
+          </div>
+
+          <div className="field">
+            <span className="label" style={{display:"inline-block"}}>IPD&nbsp;</span><div className="help-tip">
+              <span>This the distance between your eyes. Eyeglass stores will measure this for free.</span>
+          </div>
+            <div className="control">
+              <input
+                className="input"
+                type="number"
+                placeholder="Left IPD"
+                name="ipdLeft"
+                onChange={(event) => {
+                  setIpdLeft(event.target.value);
+                }}
+                defaultValue="31.0"
+                style={{ width: "50%" }}
+              ></input>
+
+              <input
+                className="input"
+                type="number"
+                placeholder="Right IPD"
+                name="ipdRight"
                 onChange={(event) => {
                   setIpdRight(event.target.value);
                 }}
@@ -109,34 +145,9 @@ export default function Shop() {
             </div>
           </div>
 
-          <div className="field">
-            <label className="label">IPD</label>
-            <div className="control">
-              <input
-                className="input"
-                type="number"
-                placeholder="Left IPD"
-                onChange={(event) => {
-                  setSphereLeft(event.target.value);
-                }}
-                defaultValue="-1.00"
-                style={{ width: "50%" }}
-              ></input>
-
-              <input
-                className="input"
-                type="number"
-                placeholder="Right IPD"
-                onChange={(event) => {
-                  setIpdLeft(event.target.value);
-                }}
-                defaultValue="31.0"
-                style={{ width: "50%" }}
-              ></input>
-            </div>
+          <h3 className="title mt-5" style={{display:"inline-block"}}>Glasses Frames&nbsp;</h3><div className="help-tip">
+              <span>You can try on glasses at an eyeglass store or dollar store to find your best fit. These are the three numbers on the inside of any glasses frame.</span>
           </div>
-
-          <h3 className="title mt-5">Glasses Frames</h3>
 
           <div className="field">
             <label className="label">Bridge (mm)</label>
@@ -144,6 +155,7 @@ export default function Shop() {
               <input
                 className="input"
                 type="number"
+                name="bridge"
                 onChange={(event) => {
                   setBridge(event.target.value);
                 }}
@@ -159,6 +171,7 @@ export default function Shop() {
               <input
                 className="input"
                 type="number"
+                name="lens"
                 onChange={(event) => {
                   setLens(event.target.value);
                 }}
@@ -174,6 +187,7 @@ export default function Shop() {
               <input
                 className="input"
                 type="number"
+                name="temple"
                 onChange={(event) => {
                   setTemple(event.target.value);
                 }}
