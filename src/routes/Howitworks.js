@@ -14,7 +14,9 @@ export default function Howitworks() {
           <div className="col-md-3 light">
             <i class="fa-solid fa-eye"></i>
             <br />
-            1.Take an eye exam
+            1.Take an eye exam at your local optometrist
+            <br />
+            You can also take our eye acuity test!
           </div>
           <div className="col-md-3 dark">
             <i class="fa-solid fa-keyboard"></i>
