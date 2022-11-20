@@ -127,7 +127,7 @@ export default class Exam extends React.Component {
           <section class="row-alt  is-info welcome is-small" style={{width:"80%", margin:"auto", borderRadius: "25px"}}>
           <div class="hero-body">
                   <div class="container" style={{lineHeight:"40px"}}>
-                      <h2 class="title">
+                      <h2 class="title" style={{lineHeight:"40px",verticalAlign:"middle",position:"absolute",top:"40%", textAlign:"left"}}>
                           <b>Your 20/20 measure is:</b>
                           <br></br>
                           {
@@ -135,7 +135,7 @@ export default class Exam extends React.Component {
                           }
                       </h2>
 
-                      <table class="table" style={{marginLeft:"40px"}}>
+                      <table class="table" style={{marginLeft:"65%", width:"50%"}}>
                       <thead>
                           <tr>
                             <th>20/20 Measure</th>
