@@ -5,6 +5,16 @@ import ShopGlasses from "./images/shop-glasses.jpg";
 
 export default function ShopSwap() {
   const [glasses, setGlasses] = useState([{}]);
+
+  const [ipdLeft, setIpdLeft] = useState("");
+  const [ipdRight, setIpdRight] = useState("");
+  const [sphereLeft, setSphereLeft] = useState("");
+  const [sphereRight, setSphereRight] = useState("");
+
+  const [bridge, setBridge] = useState("");
+  const [lens, setLens] = useState("");
+  const [temple, setTemple] = useState("");
+  
   useEffect(() => {
     fetch("/eyewear")
       .then((res) => res.json())
@@ -15,6 +25,33 @@ export default function ShopSwap() {
         console.log(glasses[0]);
       });
   }, []);
+
+  const refreshGlasses = async() => {
+    console.log(sphereRight)
+    fetch("/eyewear", {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        sphereLeft: sphereLeft,
+        sphereRight: sphereRight,
+        ipdLeft: ipdLeft,
+        ipdRight: ipdRight,
+        bridge: bridge,
+        lens: lens,
+        temple: temple
+      })
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        setGlasses(data);
+        console.log(glasses);
+        console.log(glasses[0]);
+      });
+  }
 
   return (
     <div className="ShopSwap container-fluid">
@@ -30,8 +67,8 @@ export default function ShopSwap() {
             <br />
             (Right)
           </label>{" "}
-          <input type="text" placeholder="SPH"></input>
-          <input type="text" placeholder="IPD"></input>
+          <input type="text" placeholder="SPH" onChange={(event) => {setSphereRight(event.target.value)}}></input>
+          <input type="text" placeholder="IPD" onChange={(event) => {setIpdRight(event.target.value)}}></input>
         </div>
       </form>
       <form>
@@ -41,16 +78,17 @@ export default function ShopSwap() {
             <br />
             (Left)
           </label>{" "}
-          <input type="text" placeholder="SPH"></input>
-          <input type="text" placeholder="IPD"></input>
+          <input type="text" placeholder="SPH" onChange={(event) => {setSphereLeft(event.target.value)}}></input>
+          <input type="text" placeholder="IPD" onChange={(event) => {setIpdLeft(event.target.value)}}></input>
         </div>
       </form>
       <form>
         <h1>Frame</h1>
-        <input type="text"></input>
-        <input type="text"></input>
-        <input type="text"></input>
+        <input type="text" onChange={(event) => {setBridge(event.target.value)}}></input>
+        <input type="text" onChange={(event) => {setLens(event.target.value)}}></input>
+        <input type="text" onChange={(event) => {setTemple(event.target.value)}}></input>
       </form>
+      <button onClick={refreshGlasses}>Refresh</button>
 
       {glasses.map(function (glass, idx) {
         return (
