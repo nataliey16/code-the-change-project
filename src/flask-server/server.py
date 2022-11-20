@@ -71,6 +71,13 @@ def eyewear():
 			print(glassDict)
 		return json.dumps(glassDictList)
 
+@app.route("/uploadGlasses", methods=["POST"])
+def uploadGlasses():
+	db.session.add(EyeWear(sphereLeft = float(request.form.get('sphereLeft')), sphereRight= float(request.form.get('sphereRight')),
+    ipdLeft=float(request.form.get('ipdLeft')),ipdRight=float(request.form.get('ipdRight')),bridge=float(request.form.get('bridge')),lens=float(request.form.get('lens')),temple=float(request.form.get('temple')),notes="3km away", price=9.99))
+	resp = jsonify(success=True)
+	db.session.commit()
+	return resp
 @app.route("/posts", methods=["GET"], strict_slashes=False)
 def posts():
 	#🐔
