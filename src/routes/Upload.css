@@ -1,6 +1,34 @@
-
 body {
-  background: #F5F7FA
+  background: #f5f7fa;
+}
+
+p {
+  font-family: "Roboto Mono", monospace;
+}
+
+.Upload .background-img {
+  background-image: url("images/swap-glasses-rotated.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 1000px;
+  padding: 0 200px;
+}
+
+.Upload .swap-banner {
+  background: #c8e6e0;
+  padding: 60px;
+  text-align: left;
+}
+
+.Upload h1 {
+  color: #142d4c;
+  font-family: "Abril Fatface", cursive;
+  font-size: 100px;
+  font-weight: 300;
+  text-align: left;
+  padding-bottom: 10px;
+  /* padding: 60px; */
 }
 
 .stat-val {
@@ -11,11 +39,13 @@ body {
 
 .stat-key {
   font-size: 1.4em;
-  font-weight: 200
+  font-weight: 200;
 }
 
-.section.profile-heading .column.is-2-tablet.has-text-centered + .has-text-centered {
-  border-left: 1px dotted rgba(0, 0, 0, .2);
+.section.profile-heading
+  .column.is-2-tablet.has-text-centered
+  + .has-text-centered {
+  border-left: 1px dotted rgba(0, 0, 0, 0.2);
 }
 
 .container.profile {
@@ -27,15 +57,15 @@ body {
   border-radius: 2px;
 }
 
-.modal-card .content h1 {
+.modal-card .content h2 {
   padding: 40px 10px 10px;
-  border-bottom: 1px solid #dadada
+  border-bottom: 1px solid #dadada;
 }
 
 .container.profile .profile-options .tabs ul li.link a {
   margin-bottom: 20px;
   padding: 20px;
-  background-color: #F1F1F1;
+  background-color: #f1f1f1;
 }
 
 .row-alt {
@@ -44,4 +74,16 @@ body {
   background: -moz-linear-gradient(to right, #a1d3b0, #f6f1d3);
   background: linear-gradient(to right, #a1d3b0, #f6f1d3);
   padding: 44px 0 22px 0;
+}
+
+.Upload .btn-branding {
+  background: #142d4c;
+  padding: 10px 25px;
+  margin-top: 10px;
+  color: white;
+  transition: all 100ms ease-in-out;
+}
+
+.Upload .btn-branding:hover {
+  opacity: 0.6;
 }

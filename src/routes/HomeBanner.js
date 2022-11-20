@@ -5,11 +5,9 @@ export default function HomeBanner() {
   return (
     <div className="HomeBanner">
       <div className="background-img">
-        <h1>
-          <small>Pass</small>
-          The Glass
-        </h1>
-        <p>Shop N Swap your pair of Glasses</p>
+        <i className="fa-solid fa-glasses"></i>
+        <h1>Pass The Glass</h1>
+        <p>Shop, Swap, or Donate your pair of glasses</p>
       </div>
     </div>
   );

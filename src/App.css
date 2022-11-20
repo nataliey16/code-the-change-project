@@ -7,7 +7,13 @@
 
 .App i {
   font-size: 40px;
-  color: #22437c;
+  color: #142d4c;
+}
+
+.App h1 {
+  font-family: "Abril Fatface", cursive;
+  font-size: 20px;
+  color: #142d4c;
 }
 
 .App ul {
@@ -31,4 +37,8 @@
 
 .App a:hover {
   opacity: 0.5;
+}
+
+.App .nav-icon {
+  font-size: 22px;
 }
