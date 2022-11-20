@@ -47,6 +47,11 @@ function App() {
                 </Link>
               </li>
               <li>
+                <Link to="/Exam" className="nav-link active">
+                  Exam
+                </Link>
+              </li>
+              <li>
                 <Link to="/Shop" className="nav-link active">
                   Shop
                 </Link>
