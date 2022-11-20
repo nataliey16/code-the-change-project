@@ -9,6 +9,7 @@ import Account from './routes/Account';
 
 import TheHatchText from "./routes/images/The Hatch Finals_Text Only_small.png";
 import Upload from './routes/Upload';
+import Exam from './routes/Exam';
 
 
 function App() {
@@ -73,6 +74,7 @@ function App() {
         <Route path="/Mission" element={<Mission />}></Route>
         <Route path="/Account" element={<Account />}></Route>
         <Route path="/Upload" element={<Upload />}></Route>
+        <Route path="/Exam" element={<Exam />}></Route>
       </Routes>      
   
     </div>

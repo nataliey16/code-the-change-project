@@ -120,7 +120,7 @@ export default function Upload(){
                         <div class="tile" style={{display: "block", marginTop:"20%"}}>
                             <article class="tile is-child box">
                                 <p class="title">2.5 billion</p>
-                                <p class="subtitle">who need glasses don’t have them in the world</p>
+                                <p class="subtitle">people who need glasses don’t have them in the world</p>
                             </article>
                         </div>
                         <div class="tile" style={{display: "block", marginTop:"20%"}}>
