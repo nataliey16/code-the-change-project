@@ -90,6 +90,7 @@ export default function Account(){
                     </div>
                 </section>
           </div>
+          <div style={{marginBottom:"70px"}}></div>
         </div>
     )
 }

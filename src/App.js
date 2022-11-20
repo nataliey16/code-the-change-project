@@ -1,26 +1,22 @@
-import './App.css';
-import {Link, Route, Routes } from "react-router-dom";
+import "./App.css";
+import { Link, Route, Routes } from "react-router-dom";
 
 import Home from "./routes/Home";
-import Howitworks from './routes/Howitworks';
-import Mission from './routes/Mission';
-import ShopSwap from './routes/ShopSwap';
-import Account from './routes/Account';
+import Howitworks from "./routes/Howitworks";
+import Mission from "./routes/Mission";
+import ShopSwap from "./routes/ShopSwap";
+import Account from "./routes/Account";
 
 import TheHatchText from "./routes/images/The Hatch Finals_Text Only_small.png";
-
+import Upload from "./routes/Upload";
 
 function App() {
   return (
     <div className="App container-fluid">
-    <nav className="navbar navbar-expand-lg">
+      <nav className="navbar navbar-expand-lg">
         <div className="container-fluid">
           <a href="/" title="home-page">
-            <img
-              src={TheHatchText}
-              alt="the-hatch-logo-text-only"
-              rel="noreferrer"
-            ></img>
+            <i className="fa-solid fa-glasses"></i>
           </a>
           <button
             className="navbar-toggler"
@@ -51,6 +47,11 @@ function App() {
                 </Link>
               </li>
               <li>
+                <Link to="/Upload" className="nav-link active">
+                  Upload Glasses
+                </Link>
+              </li>
+              <li>
                 <Link to="/Account" className="nav-link active">
                   Account
                 </Link>
@@ -63,11 +64,11 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />}></Route>
         <Route path="/Howitworks" element={<Howitworks />}></Route>
-        <Route path="/ShopSwap" element={<ShopSwap/>}></Route>
+        <Route path="/ShopSwap" element={<ShopSwap />}></Route>
         <Route path="/Mission" element={<Mission />}></Route>
         <Route path="/Account" element={<Account />}></Route>
-      </Routes>      
-  
+        <Route path="/Upload" element={<Upload />}></Route>
+      </Routes>
     </div>
   );
 }
