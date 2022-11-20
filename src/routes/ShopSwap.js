@@ -14,7 +14,7 @@ export default function ShopSwap() {
   const [bridge, setBridge] = useState("24");
   const [lens, setLens] = useState("53");
   const [temple, setTemple] = useState("155");
-  
+
   useEffect(() => {
     fetch("/eyewear")
       .then((res) => res.json())
@@ -60,35 +60,111 @@ export default function ShopSwap() {
       </div>
       <br />
       <h1>Enter your measurements</h1>
-      <form>
-        <div className="measurements-left">
-          <label className="prescription-label">
-            OD
-            <br />
-            (Right)
-          </label>{" "}
-          <input type="text" placeholder="SPH" onChange={(event) => {setSphereRight(event.target.value)}} defaultValue="-1.75"></input>
-          <input type="text" placeholder="IPD" onChange={(event) => {setIpdRight(event.target.value)}} defaultValue="33.0"></input>
+
+      <div style={{ width: "55%", marginLeft: "10%", marginTop: "40px" }}>
+        <h1 className="title">Prescription</h1>
+
+        <div class="field">
+          <label className="label">Sphere</label>
+          <div className="control">
+            <input
+              className="input"
+              type="number"
+              placeholder="Left Sphere"
+              onChange={(event) => {
+                setSphereRight(event.target.value);
+              }}
+              style={{ width: "50%" }}
+              defaultValue="-1.75"
+            ></input>
+            <input
+              className="input"
+              type="number"
+              placeholder="Right Sphere"
+              onChange={(event) => {
+                setIpdRight(event.target.value);
+              }}
+              defaultValue="33.0"
+              style={{ width: "50%" }}
+            ></input>
+          </div>
         </div>
-      </form>
-      <form>
-        <div className="measurements-right">
-          <label className="prescription-label me-2">
-            OD
-            <br />
-            (Left)
-          </label>{" "}
-          <input type="text" placeholder="SPH" onChange={(event) => {setSphereLeft(event.target.value)}} defaultValue="-1.00"></input>
-          <input type="text" placeholder="IPD" onChange={(event) => {setIpdLeft(event.target.value)}} defaultValue="31.0"></input>
+
+        <div className="field">
+          <label className="label">IPD</label>
+          <div className="control">
+            <input
+              className="input"
+              type="number"
+              placeholder="Left IPD"
+              onChange={(event) => {
+                setSphereLeft(event.target.value);
+              }}
+              defaultValue="-1.00"
+              style={{ width: "50%" }}
+            ></input>
+
+            <input
+              className="input"
+              type="number"
+              placeholder="Right IPD"
+              onChange={(event) => {
+                setIpdLeft(event.target.value);
+              }}
+              defaultValue="31.0"
+              style={{ width: "50%" }}
+            ></input>
+          </div>
         </div>
-      </form>
-      <form>
-        <h1>Frame</h1>
-        <input type="text" onChange={(event) => {setBridge(event.target.value)}} defaultValue="24"></input>
-        <input type="text" onChange={(event) => {setLens(event.target.value)}} defaultValue="49"></input>
-        <input type="text" onChange={(event) => {setTemple(event.target.value)}} defaultValue="150"></input>
-      </form>
-      <button onClick={refreshGlasses}>Refresh</button>
+
+        <h1 class="title">Glasses Frames</h1>
+
+        <div class="field">
+          <label class="label">Bridge (mm)</label>
+          <div class="control">
+            <input
+              className="input"
+              type="number"
+              onChange={(event) => {
+                setBridge(event.target.value);
+              }}
+              defaultValue="24"
+              style={{ width: "50%" }}
+            ></input>
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="label">Lens (mm)</label>
+          <div class="control">
+            <input
+              class="input"
+              type="number"
+              onChange={(event) => {
+                setLens(event.target.value);
+              }}
+              defaultValue="49"
+              style={{ width: "50%" }}
+            ></input>
+          </div>
+        </div>
+
+        <div className="field">
+          <label className="label">Temple (mm)</label>
+          <div className="control">
+            <input
+              className="input"
+              type="number"
+              onChange={(event) => {
+                setTemple(event.target.value);
+              }}
+              defaultValue="150"
+              style={{ width: "50%" }}
+            ></input>
+          </div>
+        </div>
+        <button onClick={refreshGlasses}>Refresh</button>
+      </div>
 
       {glasses.map(function (glass, idx) {
         return (
@@ -100,11 +176,20 @@ export default function ShopSwap() {
                   alt="Glasses"
                   className="img-fluid"
                 ></img>
-                {glass.similarity ? <div className="row" style={{textAlign: 'center', width: '100%', fontSize: '20px'}}>
-                  
-                <div className="col-xs-12">
-                  Match: {Math.round(glass.similarity * 100)}%
-                </div></div> : null}
+                {glass.similarity ? (
+                  <div
+                    className="row"
+                    style={{
+                      textAlign: "center",
+                      width: "100%",
+                      fontSize: "20px",
+                    }}
+                  >
+                    <div className="col-xs-12">
+                      Match: {Math.round(glass.similarity * 100)}%
+                    </div>
+                  </div>
+                ) : null}
               </div>
               <div className="col-lg-6 glasses-detail">
                 <div className="row">

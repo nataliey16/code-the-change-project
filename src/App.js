@@ -7,7 +7,6 @@ import Mission from "./routes/Mission";
 import ShopSwap from "./routes/ShopSwap";
 import Account from "./routes/Account";
 
-import TheHatchText from "./routes/images/The Hatch Finals_Text Only_small.png";
 import Upload from "./routes/Upload";
 
 function App() {
