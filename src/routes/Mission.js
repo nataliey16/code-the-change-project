@@ -6,14 +6,14 @@ export default function Mission() {
         <h1>
           A Cleaner
           <br />
-          way to
+          way to get
           <br />
-          The Glass
+          The Glasses.
         </h1>
       </div>
       <div className="card" style={{ border: "none" }}>
         <div className="card-content">
-          <p className="title">Did you know that?</p>
+          <p className="title"> Did you know... </p>
         </div>
         <footer
           style={{
@@ -26,14 +26,16 @@ export default function Mission() {
         >
           <div className="tile" style={{ display: "block", marginTop: "" }}>
             <article className="tile is-child box">
+              <i class="fa-solid fa-people-roof"></i>
               <p className="title">74%</p>
               <p className="subtitle">
-                Of families in Canada have vision impairment
+                Of families in Canada have vision impairment{" "}
               </p>
             </article>
           </div>
           <div className="tile" style={{ display: "block", marginTop: "10%" }}>
             <article className="tile is-child box">
+              <i class="fa-solid fa-earth-americas"></i>
               <p className="title">2.5 billion</p>
               <p className="subtitle">
                 who need glasses don’t have them in the world
@@ -42,6 +44,7 @@ export default function Mission() {
           </div>
           <div className="tile" style={{ display: "block", marginTop: "10%" }}>
             <article className="tile is-child box">
+              <i class="fa-solid fa-glasses"></i>
               <p className="title">90%</p>
               <p className="subtitle">
                 of peoply needlessly affected by poor vision live in the
@@ -51,13 +54,15 @@ export default function Mission() {
           </div>
           <div className="tile" style={{ display: "block", marginTop: "10%" }}>
             <article className="tile is-child box">
+              <i class="fa-solid fa-dollar-sign"></i>
               <p className="title">$200</p>
               <p className="subtitle">is the average cost of new glasses</p>
             </article>
           </div>
           <div className="tile" style={{ display: "block", marginTop: "10%" }}>
             <article className="tile is-child box">
-              <p className="title">Environment</p>
+              <i class="fa-solid fa-seedling"></i>
+              <p className="title"> Environment</p>
               <p className="subtitle">Add fact here</p>
             </article>
           </div>

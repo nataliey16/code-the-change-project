@@ -12,19 +12,20 @@
   font-family: "Abril Fatface", cursive;
   font-size: 80px;
   font-weight: 100;
-  margin: 50px 0;
+  padding: 10px 10px;
   text-align: left;
 }
 
 .Mission .card {
-  background: linear-gradient(90deg, #f2cc64 50%, pink 50%);
+  background: linear-gradient(90deg, #bed1a0 50%, #c8e6e0 50%);
   padding-bottom: 60px;
 }
 
 .Mission .title {
   color: #142d4c;
+  border-radius: 10px;
   font-family: "Abril Fatface", cursive;
-  font-size: 80px;
+  font-size: 50px;
   font-weight: 100;
   margin: 30px 0;
   text-align: center;

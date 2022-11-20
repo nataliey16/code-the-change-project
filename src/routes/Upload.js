@@ -37,8 +37,8 @@ export default function Upload() {
               <div class="column is-two-thirds has-text-left">
                 <h1 class="title is-1">Upload a Glasses</h1>
                 <p class="is-size-4">
-                  By donating your Glasses, you are helping another family out
-                  there.{" "}
+                  By donating or swapping your Glasses, you are helping another
+                  family out there.{" "}
                 </p>
 
                 <form onSubmit={uploadSubmit}>
