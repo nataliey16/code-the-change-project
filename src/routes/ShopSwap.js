@@ -6,15 +6,15 @@ import ShopGlasses from "./images/shop-glasses.jpg";
 export default function ShopSwap() {
   const [glasses, setGlasses] = useState([{}]);
 
-  const [ipdLeft, setIpdLeft] = useState("");
-  const [ipdRight, setIpdRight] = useState("");
-  const [sphereLeft, setSphereLeft] = useState("");
-  const [sphereRight, setSphereRight] = useState("");
+  const [ipdLeft, setIpdLeft] = useState("31.0");
+  const [ipdRight, setIpdRight] = useState("33.0");
+  const [sphereLeft, setSphereLeft] = useState("-1.00");
+  const [sphereRight, setSphereRight] = useState("-1.75");
 
-  const [bridge, setBridge] = useState("");
-  const [lens, setLens] = useState("");
-  const [temple, setTemple] = useState("");
-
+  const [bridge, setBridge] = useState("24");
+  const [lens, setLens] = useState("53");
+  const [temple, setTemple] = useState("155");
+  
   useEffect(() => {
     fetch("/eyewear")
       .then((res) => res.json())
@@ -67,20 +67,8 @@ export default function ShopSwap() {
             <br />
             (Right)
           </label>{" "}
-          <input
-            type="text"
-            placeholder="SPH"
-            onChange={(event) => {
-              setSphereRight(event.target.value);
-            }}
-          ></input>
-          <input
-            type="text"
-            placeholder="IPD"
-            onChange={(event) => {
-              setIpdRight(event.target.value);
-            }}
-          ></input>
+          <input type="text" placeholder="SPH" onChange={(event) => {setSphereRight(event.target.value)}} defaultValue="-1.75"></input>
+          <input type="text" placeholder="IPD" onChange={(event) => {setIpdRight(event.target.value)}} defaultValue="33.0"></input>
         </div>
       </form>
       <form>
@@ -90,42 +78,15 @@ export default function ShopSwap() {
             <br />
             (Left)
           </label>{" "}
-          <input
-            type="text"
-            placeholder="SPH"
-            onChange={(event) => {
-              setSphereLeft(event.target.value);
-            }}
-          ></input>
-          <input
-            type="text"
-            placeholder="IPD"
-            onChange={(event) => {
-              setIpdLeft(event.target.value);
-            }}
-          ></input>
+          <input type="text" placeholder="SPH" onChange={(event) => {setSphereLeft(event.target.value)}} defaultValue="-1.00"></input>
+          <input type="text" placeholder="IPD" onChange={(event) => {setIpdLeft(event.target.value)}} defaultValue="31.0"></input>
         </div>
       </form>
       <form>
         <h1>Frame</h1>
-        <input
-          type="text"
-          onChange={(event) => {
-            setBridge(event.target.value);
-          }}
-        ></input>
-        <input
-          type="text"
-          onChange={(event) => {
-            setLens(event.target.value);
-          }}
-        ></input>
-        <input
-          type="text"
-          onChange={(event) => {
-            setTemple(event.target.value);
-          }}
-        ></input>
+        <input type="text" onChange={(event) => {setBridge(event.target.value)}} defaultValue="24"></input>
+        <input type="text" onChange={(event) => {setLens(event.target.value)}} defaultValue="49"></input>
+        <input type="text" onChange={(event) => {setTemple(event.target.value)}} defaultValue="150"></input>
       </form>
       <button onClick={refreshGlasses}>Refresh</button>
 
@@ -139,6 +100,11 @@ export default function ShopSwap() {
                   alt="Glasses"
                   className="img-fluid"
                 ></img>
+                {glass.similarity ? <div className="row" style={{textAlign: 'center', width: '100%', fontSize: '20px'}}>
+                  
+                <div className="col-xs-12">
+                  Match: {Math.round(glass.similarity * 100)}%
+                </div></div> : null}
               </div>
               <div className="col-lg-6 glasses-detail">
                 <div className="row">

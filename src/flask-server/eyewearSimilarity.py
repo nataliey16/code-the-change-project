@@ -11,6 +11,8 @@ class EyeWearInformation:
 def SimilarityOfEyewear(EyeWear1 : EyeWearInformation, EyeWear2 : EyeWearInformation) -> float:
     distance = 0
     importance = [0.15, 0.15, 0.04, 0.02, 0.02, 0.02]
+    print(EyeWear1.ListOfAll)
+    print(EyeWear2.ListOfAll)
     for i in range(len(EyeWear1.ListOfAll)):
         distance += abs(EyeWear1.ListOfAll[i] - EyeWear2.ListOfAll[i]) * importance[i]
     return 1 / pow(2,distance)
