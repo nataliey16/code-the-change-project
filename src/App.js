@@ -36,20 +36,21 @@ function App() {
                 </Link>
               </li>
               <li>
+                <Link to="/Mission" className="nav-link active">
+                  Mission
+                </Link>
+              </li>
+              <li>
                 <Link to="/Shop" className="nav-link active">
                   Shop
                 </Link>
               </li>
               <li>
                 <Link to="/Upload" className="nav-link active">
-                  Upload Glasses
+                  Swap
                 </Link>
               </li>
-              <li>
-                <Link to="/Mission" className="nav-link active">
-                  Mission
-                </Link>
-              </li>
+
               <li>
                 <Link to="/Account" className="nav-link active">
                   Account
@@ -63,8 +64,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />}></Route>
         <Route path="/Howitworks" element={<Howitworks />}></Route>
+        <Route path="/Mission" element={<Mission />}></Route>
         <Route path="/Shop" element={<Shop />}></Route>
-        <Route path="/Mission" element={<Mission />}></Route> 
         <Route path="/Account" element={<Account />}></Route>
         <Route path="/Upload" element={<Upload />}></Route>
       </Routes>

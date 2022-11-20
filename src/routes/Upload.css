@@ -2,6 +2,25 @@ body {
   background: #f5f7fa;
 }
 
+.Upload .background-img {
+  background-image: url("images/swap-glasses-rotated.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 1000px;
+  padding: 0 200px;
+}
+
+.Upload h1 {
+  color: #142d4c;
+  background: #c8e6e0;
+  font-family: "Abril Fatface", cursive;
+  font-size: 100px;
+  font-weight: 300;
+  padding: 60px;
+  text-align: left;
+}
+
 .stat-val {
   font-size: 3em;
   padding-top: 20px;
@@ -28,7 +47,7 @@ body {
   border-radius: 2px;
 }
 
-.modal-card .content h1 {
+.modal-card .content h2 {
   padding: 40px 10px 10px;
   border-bottom: 1px solid #dadada;
 }

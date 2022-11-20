@@ -8,10 +8,9 @@
   font-family: "Abril Fatface", cursive;
   font-size: 100px;
   font-weight: 100;
-  margin-top: 0;
   text-align: center;
-  text-shadow: -0.25px -0.25px 0 white, 0.25px -0.25px 0 white,
-    -0.25px 0.25px 0 white, 0.25px 0.25px 0 white;
+  /* text-shadow: -0.25px -0.25px 0 white, 0.25px -0.25px 0 white,
+    -0.25px 0.25px 0 white, 0.25px 0.25px 0 white; */
 }
 
 .Home h2 {
@@ -24,6 +23,10 @@
 }
 
 .Home p {
+  background: rgb(225, 225, 225, 0.8);
+  border-radius: 10px;
+  padding: 20px;
+
   font-family: "Roboto Mono", monospace;
   font-size: 20px;
   margin: 30px;

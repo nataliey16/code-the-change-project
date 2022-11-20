@@ -16,8 +16,7 @@ export default function Home() {
         <p>
           Looking for an affordable & sustainable pair of glasses? Input your
           measurements and find your match!
-        </p>
-        <p>
+          <br />
           Don't know what to do with your old pair of glasses? Donate or Swap
           them!{" "}
         </p>
@@ -45,7 +44,7 @@ export default function Home() {
       <div className="footer">
         <footer>
           <i className="fa-solid fa-glasses footer-icon"></i>
-          <button className="btn btn-branding">Contast us</button>
+          <button className="btn btn-branding">Contast Us</button>
         </footer>
       </div>
     </div>
