@@ -1,6 +1,44 @@
-
 body {
-  background: #F5F7FA
+  background: #f5f7fa;
+}
+
+.Account h1 {
+  color: #142d4c;
+  font-family: "Abril Fatface", cursive;
+  font-size: 50px;
+  font-weight: 300;
+  padding-top: 30px;
+  text-align: left;
+}
+
+.Account .user-profile {
+  background: linear-gradient(180deg, white 50%, #efecda 50%);
+  padding: 30px;
+  margin-bottom: 50px;
+}
+
+.Account .history {
+  background: linear-gradient(180deg, white 50%, #c8e6e0 50%);
+  padding: 30px;
+}
+
+.Account section {
+  background: #cbe2c1;
+  padding: 30px;
+  /* background: -webkit-linear-gradient(to right, #a1d3b0, #f6f1d3);
+  background: -moz-linear-gradient(to right, #a1d3b0, #f6f1d3);
+  background: linear-gradient(to right, #a1d3b0, #f6f1d3); */
+}
+
+.Account .card-content {
+  height: 100px;
+  margin: 30px 30px;
+  padding: 10px 0px;
+}
+
+.Account input {
+  border-radius: 25px;
+  border: 2px solid #142d4c;
 }
 
 .stat-val {
@@ -11,11 +49,13 @@ body {
 
 .stat-key {
   font-size: 1.4em;
-  font-weight: 200
+  font-weight: 200;
 }
 
-.section.profile-heading .column.is-2-tablet.has-text-centered + .has-text-centered {
-  border-left: 1px dotted rgba(0, 0, 0, .2);
+.section.profile-heading
+  .column.is-2-tablet.has-text-centered
+  + .has-text-centered {
+  border-left: 1px dotted rgba(0, 0, 0, 0.2);
 }
 
 .container.profile {
@@ -29,19 +69,11 @@ body {
 
 .modal-card .content h1 {
   padding: 40px 10px 10px;
-  border-bottom: 1px solid #dadada
+  border-bottom: 1px solid #dadada;
 }
 
 .container.profile .profile-options .tabs ul li.link a {
   margin-bottom: 20px;
   padding: 20px;
-  background-color: #F1F1F1;
-}
-
-.row-alt {
-  background: #cbe2c1;
-  background: -webkit-linear-gradient(to right, #a1d3b0, #f6f1d3);
-  background: -moz-linear-gradient(to right, #a1d3b0, #f6f1d3);
-  background: linear-gradient(to right, #a1d3b0, #f6f1d3);
-  padding: 44px 0 22px 0;
+  background-color: #f1f1f1;
 }

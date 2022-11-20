@@ -42,7 +42,7 @@ export default function Upload() {
               <div class="column is-two-thirds has-text-left">
                 <h2 class="title is-1">Upload a pair of Glasses</h2>
                 <p class="is-size-4">
-                  By swapping or donating your Glasses, you are giving someone a
+                  By swapping or donating your Glasses, you are giving someone
                   healthier vision and reducing one less frame in our landfills.{" "}
                 </p>
 
