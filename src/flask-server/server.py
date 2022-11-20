@@ -1,8 +1,13 @@
 from flask import current_app,jsonify,request
 from app import create_app,db
+import eyeExam
 from models import Articles, EyeWear, Post, User,articles_schema, users_schema,user_schema, eyewears_schema, posts_schema
 from eyewearSimilarity import *
 import json
+import speech_recognition as sr
+import soundfile
+import moviepy.editor as moviepy
+
 
 # Create an application instance
 app = create_app()
@@ -42,6 +47,34 @@ def user():
 	
 	return jsonify(results)
 
+@app.route("/exam", methods=['POST', 'GET'])
+def exam():
+	all = [""]
+
+	if request.method == "POST":
+		f = request.files['file']
+		with open('audio.wav', 'wb') as audio:
+			f.save(audio)
+		
+		moviepy.ffmpeg_tools.ffmpeg_extract_audio("audio.wav", "new.wav")
+
+		r = sr.Recognizer()
+		
+		with sr.AudioFile('new.wav') as source:
+			r.adjust_for_ambient_noise(source)
+			audio_text = r.listen(source, timeout=None)
+			print(audio_text)
+			try:
+				result = r.recognize_google(audio_text,language="en")
+				print(result)
+				all.append(result)
+				
+			except:
+				print("try again")
+	print(all)
+	score = eyeExam.getScoresFromInput(all[-1])
+	print(score) 
+	return json.dumps(score)
 
 @app.route("/eyewear", methods=["GET", "POST"], strict_slashes=False)
 def eyewear():
