@@ -23,10 +23,6 @@
   text-align: center;
 }
 
-.ShopSwap img {
-  max-width: 75%;
-}
-
-.ShopSwap input {
-  /* margin: 10px 10px; */
+.ShopSwap .drop-item-button {
+  justify-content: left;
 }

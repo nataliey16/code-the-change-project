@@ -1,6 +1,5 @@
-
 body {
-  background: #F5F7FA
+  background: #f5f7fa;
 }
 
 .stat-val {
@@ -11,11 +10,13 @@ body {
 
 .stat-key {
   font-size: 1.4em;
-  font-weight: 200
+  font-weight: 200;
 }
 
-.section.profile-heading .column.is-2-tablet.has-text-centered + .has-text-centered {
-  border-left: 1px dotted rgba(0, 0, 0, .2);
+.section.profile-heading
+  .column.is-2-tablet.has-text-centered
+  + .has-text-centered {
+  border-left: 1px dotted rgba(0, 0, 0, 0.2);
 }
 
 .container.profile {
@@ -29,13 +30,13 @@ body {
 
 .modal-card .content h1 {
   padding: 40px 10px 10px;
-  border-bottom: 1px solid #dadada
+  border-bottom: 1px solid #dadada;
 }
 
 .container.profile .profile-options .tabs ul li.link a {
   margin-bottom: 20px;
   padding: 20px;
-  background-color: #F1F1F1;
+  background-color: #f1f1f1;
 }
 
 .row-alt {

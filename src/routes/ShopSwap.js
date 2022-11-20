@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./ShopSwap.css";
 import "bulma/css/bulma.css";
 import ShopGlasses from "./images/shop-glasses.jpg";
+import Dropdown from "react-bootstrap/Dropdown";
 
 export default function ShopSwap() {
   const [glasses, setGlasses] = useState([{}]);
@@ -59,12 +60,18 @@ export default function ShopSwap() {
         <h2>Shop: Shop N Swap</h2>
       </div>
       <br />
-      <h1>Enter your measurements</h1>
-
-      <div style={{ width: "55%", marginLeft: "10%", marginTop: "40px" }}>
+      <div
+        style={{
+          width: "55%",
+          marginLeft: "10%",
+          marginTop: "40px",
+          marginBottom: "40px",
+          textAlign: "left",
+        }}
+      >
         <h1 className="title">Prescription</h1>
 
-        <div class="field">
+        <div className="field">
           <label className="label">Sphere</label>
           <div className="control">
             <input
@@ -117,11 +124,11 @@ export default function ShopSwap() {
           </div>
         </div>
 
-        <h1 class="title">Glasses Frames</h1>
+        <h1 className="title">Glasses Frames</h1>
 
-        <div class="field">
-          <label class="label">Bridge (mm)</label>
-          <div class="control">
+        <div className="field">
+          <label className="label">Bridge (mm)</label>
+          <div className="control">
             <input
               className="input"
               type="number"
@@ -134,11 +141,11 @@ export default function ShopSwap() {
           </div>
         </div>
 
-        <div class="field">
-          <label class="label">Lens (mm)</label>
-          <div class="control">
+        <div className="field">
+          <label className="label">Lens (mm)</label>
+          <div className="control">
             <input
-              class="input"
+              className="input"
               type="number"
               onChange={(event) => {
                 setLens(event.target.value);
@@ -163,12 +170,23 @@ export default function ShopSwap() {
             ></input>
           </div>
         </div>
-        <button onClick={refreshGlasses}>Refresh</button>
+        <button className="button is-link" onClick={refreshGlasses}>
+          Refresh
+        </button>
       </div>
+
+      <Dropdown>
+        <Dropdown.Toggle variant="success">Sort by</Dropdown.Toggle>
+        <Dropdown.Menu>
+          <Dropdown.Item href="/#">input value</Dropdown.Item>
+          <Dropdown.Item href="/#">input value</Dropdown.Item>
+          <Dropdown.Item href="/#">input value</Dropdown.Item>
+        </Dropdown.Menu>
+      </Dropdown>
 
       {glasses.map(function (glass, idx) {
         return (
-          <div class="card" style={{ width: "80%", margin: "auto" }}>
+          <div className="card" style={{ width: "80%", margin: "auto" }}>
             <div className="row shop-glasses">
               <div className="col-lg-6">
                 <img
