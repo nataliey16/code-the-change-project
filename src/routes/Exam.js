@@ -79,10 +79,16 @@ export default class Exam extends React.Component {
           </section>
           <section className="info-tiles" style={{marginTop:"55px", width:"95%", marginLeft:"auto",marginRight:"auto"}}>
               <div class="tile is-ancestor has-text-centered">
-                <div class="tile is-parent">
+              <div class="tile is-parent">
                       <article class="tile is-child box">
                           <p class="title">Look at the Chart</p>
-                          <p class="subtitle">Try to get it to scale. There is a quarter for reference in the picture</p>
+                          <p class="subtitle">Try to get it to scale. There is a quarter for reference in the picture.</p>
+                      </article>
+                  </div>
+                  <div class="tile is-parent">
+                      <article class="tile is-child box">
+                          <p class="title">Stand 20ft</p>
+                          <p class="subtitle">Stand 20ft away from the chart and cover one of your eyes completely.</p>
                       </article>
                   </div>
                   <div class="tile is-parent">
@@ -91,16 +97,16 @@ export default class Exam extends React.Component {
                           <p class="subtitle">Allow the computer to use your microphone</p>
                       </article>
                   </div>
+              </div>
+          </section>
+          <section class="info-tiles" style={{marginTop:"15px", width:"95%", marginLeft:"auto",marginRight:"auto"}}>
+              <div class="tile is-ancestor has-text-centered">
                   <div class="tile is-parent">
                       <article class="tile is-child box">
                           <p class="title">Read the Direction</p>
                           <p class="subtitle">Say each direction out loud and clearly. Directions: "right","left","up","down"</p>
                       </article>
                   </div>
-              </div>
-          </section>
-          <section class="info-tiles" style={{marginTop:"15px", width:"95%", marginLeft:"auto",marginRight:"auto"}}>
-              <div class="tile is-ancestor has-text-centered">
                   <div class="tile is-parent">
                       <article class="tile is-child box">
                           <p class="title">say "Skip"</p>
@@ -111,12 +117,6 @@ export default class Exam extends React.Component {
                       <article class="tile is-child box">
                           <p class="title">End the recording</p>
                           <p class="subtitle">The program will rate your eye severity and provide the transcript</p>
-                      </article>
-                  </div>
-                  <div class="tile is-parent">
-                      <article class="tile is-child box">
-                          <p class="title">Get the results!</p>
-                          <p class="subtitle">The program can help provide a prescription!</p>
                       </article>
                   </div>
               </div>
