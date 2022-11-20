@@ -29,8 +29,8 @@ export default function Account() {
             <h1 class="title">
               Hello,{" "}
               <em>
-                Natalie!
-                {data.firstName} {data.lastName}
+                
+                {data.firstName} {data.lastName}!
               </em>
             </h1>
           </div>
