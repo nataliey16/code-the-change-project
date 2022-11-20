@@ -5,6 +5,8 @@ import Dropdown from "react-bootstrap/Dropdown";
 
 export default function ShopSwap() {
   const [glasses, setGlasses] = useState([{}]);
+  const [similarityInputted, setSimilarityInputted] = useState(false);
+  const [sortStyle, setSortStyle] = useState("distance");
 
   const [ipdLeft, setIpdLeft] = useState("31.0");
   const [ipdRight, setIpdRight] = useState("33.0");
@@ -19,10 +21,7 @@ export default function ShopSwap() {
     fetch("/eyewear")
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
         setGlasses(data);
-        console.log(glasses);
-        console.log(glasses[0]);
       });
   }, []);
 
@@ -46,11 +45,14 @@ export default function ShopSwap() {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
         setGlasses(data);
-        console.log(glasses);
-        console.log(glasses[0]);
+        setSimilarityInputted(true);
+        setSortStyle("similarity");
       });
+  };
+
+  const sortSelected = (e, k) => {
+    setSortStyle(k.target.innerHTML.toLowerCase())
   };
 
   return (
@@ -181,17 +183,17 @@ export default function ShopSwap() {
           </button>
         </div>
       </div>
-
-      <Dropdown>
-        <Dropdown.Toggle variant="success">Sort by</Dropdown.Toggle>
+                <br></br>
+      <Dropdown onSelect={sortSelected}>
+        <Dropdown.Toggle variant="success">Sorted by: {sortStyle.charAt(0).toUpperCase() + sortStyle.slice(1)}</Dropdown.Toggle>
         <Dropdown.Menu>
-          <Dropdown.Item href="/#">input value</Dropdown.Item>
-          <Dropdown.Item href="/#">input value</Dropdown.Item>
-          <Dropdown.Item href="/#">input value</Dropdown.Item>
+          <Dropdown.Item>Distance</Dropdown.Item>
+          <Dropdown.Item>Price</Dropdown.Item>
+          { similarityInputted ? <Dropdown.Item>Similarity</Dropdown.Item> : null }
         </Dropdown.Menu>
       </Dropdown>
 
-      {glasses.map(function (glass, idx) {
+      {glasses.sort((a, b) => a[sortStyle] > b[sortStyle] ? 1 : -1).map(function (glass, idx) {
         return (
           <div
             className="group-results"
@@ -214,7 +216,7 @@ export default function ShopSwap() {
                     }}
                   >
                     <div className="col-xs-12">
-                      Match: {Math.round(glass.similarity * 100)}%
+                      Match: {100 - Math.round(glass.similarity * 100)}%
                     </div>
                   </div>
                 ) : null}
