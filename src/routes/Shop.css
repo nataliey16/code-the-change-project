@@ -2,10 +2,10 @@
   padding: 0;
 }
 
-.help-tip{
-  display:inline-block;
+.help-tip {
+  display: inline-block;
   text-align: center;
-  background-color: #BCDBEA;
+  background-color: #bcdbea;
   border-radius: 50%;
   width: 24px;
   height: 24px;
@@ -14,69 +14,75 @@
   cursor: default;
 }
 
-.help-tip:before{
-  content:'?';
+.help-tip:before {
+  content: "?";
   font-weight: bold;
-  color:#fff;
+  color: #fff;
 }
 
-.help-tip:hover span{
-  display:block;
+.help-tip:hover span {
+  display: block;
   transform-origin: 100% 0%;
 
   -webkit-animation: fadeIn 0.3s ease-in-out;
   animation: fadeIn 0.3s ease-in-out;
-
 }
 
-.help-tip span{    /* The tooltip */
+.help-tip span {
+  /* The tooltip */
   display: none;
   text-align: center;
-  background-color: #1E2021;
+  background-color: #1e2021;
   padding: 20px;
   width: 300px;
   position: absolute;
   border-radius: 3px;
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
   z-index: 99;
-  color: #FFF;
+  color: #fff;
   font-size: 13px;
 }
 
-.help-tip span:before{ /* The pointer of the tooltip */
-  content: '';
-  width:0;
+.help-tip span:before {
+  /* The pointer of the tooltip */
+  content: "";
+  width: 0;
   height: 0;
-  border:6px solid transparent;
-  border-bottom-color:#1E2021;
+  border: 6px solid transparent;
+  border-bottom-color: #1e2021;
 }
 
-.help-tip span:after{ /* Prevents the tooltip from being hidden */
-  width:100%;
-  height:40px;
-  content:'';
+.help-tip span:after {
+  /* Prevents the tooltip from being hidden */
+  width: 100%;
+  height: 40px;
+  content: "";
   position: absolute;
-  top:-40px;
-  left:0;
+  top: -40px;
+  left: 0;
 }
 
 /* CSS animation */
 
 @-webkit-keyframes fadeIn {
-  0% { 
-      opacity:0; 
-      transform: scale(0.6);
+  0% {
+    opacity: 0;
+    transform: scale(0.6);
   }
 
   100% {
-      opacity:100%;
-      transform: scale(1);
+    opacity: 100%;
+    transform: scale(1);
   }
 }
 
 @keyframes fadeIn {
-  0% { opacity:0; }
-  100% { opacity:100%; }
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
 }
 
 .Shop .background-img {
@@ -153,11 +159,12 @@
 }
 
 .Shop .group-results {
-  background: #bed1a0;
+  background: linear-gradient(90deg, #bed1a0 50%, #e0e9d8 50%);
   border-radius: 5px;
 }
 
 .Shop .individual-results {
+  position: relative;
   font-size: 20px;
   font-family: "Roboto Mono", monospace;
   margin: 10px 0;
@@ -166,25 +173,9 @@
 }
 
 .Shop .first-img {
-  margin-top: 110px;
+  margin-top: 70px;
 }
 
-.Shop .light {
-  display: block;
-  margin: 0 auto;
-  border: 1px solid white;
-  background: #e0e9d8;
-}
-
-.Shop .dark {
-  border: 1px solid white;
-  background: #c6d5c6;
-}
-
-.Shop .dark-view {
-  background: #142d4c;
-  border: 1px solid white;
-}
 
 .Shop .view-btn {
   font-family: "Roboto Mono", monospace;

@@ -8,7 +8,7 @@
 }
 
 .container {
-  display:flex;
+  display: flex;
   justify-content: space-between;
   font-size: 16px;
 }
@@ -63,4 +63,48 @@
 
 .ShopSwap .group-results {
   background: #b3b975;
+}
+
+.View {
+  background: linear-gradient(90deg, #ffe48c 50%, #fcf0cf 50%);
+}
+
+.View .img-container {
+  padding: 60px 30px 30px 30px;
+}
+
+.View img {
+  border: 10px solid white;
+  position: relative;
+  right: 60px;
+  border-radius: 10px;
+}
+
+.View .btn-branding {
+  position: relative;
+  right: 60px;
+  background: #142d4c;
+  padding: 10px 25px;
+  color: white;
+  transition: all 100ms ease-in-out;
+}
+
+.View .btn-branding:hover {
+  opacity: 0.6;
+}
+
+.View .glasses-detail {
+  background: white;
+  position: relative;
+  top: 70px;
+  left: 70px;
+  display: block;
+  margin: 0 auto;
+  font-family: "Roboto Mono", monospace;
+  font-size: 15px;
+  text-align: center;
+}
+
+.View .your-results {
+  font-size: 14px;
 }
