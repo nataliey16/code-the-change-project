@@ -32,13 +32,13 @@ export default function Upload() {
     <div className="Upload">
       <div className="swap-banner">
         <h1>
-          <small>Swap or Donate</small>
+          <small>Donate or Swap</small>
           <br />
-          The Glasses.
+          The Glasses
         </h1>
         <p className="is-size-5">
-          By swapping or donating your Glasses, you are giving someone healthier
-          vision and reducing waste in our landfills.{" "}
+          By donating and/or swapping your Glasses, you are giving someone a
+          healthier vision and reducing waste in our landfills.{" "}
         </p>
       </div>
       <section class="hero is-fullheight">

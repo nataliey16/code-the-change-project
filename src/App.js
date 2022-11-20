@@ -8,7 +8,6 @@ import Shop from "./routes/Shop";
 import Upload from "./routes/Upload";
 import Account from "./routes/Account";
 
-
 function App() {
   return (
     <div className="App container-fluid">
@@ -53,7 +52,7 @@ function App() {
 
               <li>
                 <Link to="/Account" className="nav-link active">
-                  Account
+                  <i className="nav-icon fa-solid fa-user"></i>
                 </Link>
               </li>
             </ul>
