@@ -26,13 +26,13 @@ export default function ShopSwap() {
       });
   }, []);
 
-  const refreshGlasses = async() => {
-    console.log(sphereRight)
+  const refreshGlasses = async () => {
+    console.log(sphereRight);
     fetch("/eyewear", {
-      method: 'POST',
+      method: "POST",
       headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json',
+        Accept: "application/json",
+        "Content-Type": "application/json",
       },
       body: JSON.stringify({
         sphereLeft: sphereLeft,
@@ -41,8 +41,8 @@ export default function ShopSwap() {
         ipdRight: ipdRight,
         bridge: bridge,
         lens: lens,
-        temple: temple
-      })
+        temple: temple,
+      }),
     })
       .then((res) => res.json())
       .then((data) => {
@@ -51,7 +51,7 @@ export default function ShopSwap() {
         console.log(glasses);
         console.log(glasses[0]);
       });
-  }
+  };
 
   return (
     <div className="ShopSwap container-fluid">
