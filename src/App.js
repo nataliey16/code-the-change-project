@@ -47,7 +47,7 @@ function App() {
               </li>
               <li>
                 <Link to="/Upload" className="nav-link active">
-                  Swap
+                  Swap or Donate
                 </Link>
               </li>
 

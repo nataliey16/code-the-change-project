@@ -35,6 +35,29 @@ export default function Howitworks() {
           </div>
         </div>
       </section>
+      <section className="swap-section">
+        <h2>Swap or Donate the Glasses</h2>
+        <p>Need an upgrade? Swap!</p>
+        <p>Not sure what to do with your old glasses? Donate!</p>
+        <div className="row shop-steps">
+          <div className="col-md-4 light-swap">
+            <i class="fa-solid fa-arrow-pointer"></i> <br />
+            2. Select <strong> Swap or Donate </strong>
+          </div>
+          <div className="col-md-4 dark-swap">
+            <i class="fa-solid fa-keyboard"></i>
+            <br />
+            2. Input the prescription of your
+            <br /> old pair of glasses
+          </div>
+          <div className="col-md-4 light-swap">
+            <i class="fa-solid fa-house"></i> <br />
+            3. Ta da!
+            <br />
+            Your glasses are awaiting their new owner!
+          </div>
+        </div>
+      </section>
     </div>
   );
 }

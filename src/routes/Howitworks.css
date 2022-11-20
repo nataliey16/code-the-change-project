@@ -23,6 +23,8 @@
   font-size: 30px;
   font-weight: 10;
   padding-left: 10px;
+  margin: 10px 10px;
+
   text-align: left;
 }
 
@@ -31,6 +33,8 @@
   font-family: "Roboto Mono", monospace;
   font-size: 20px;
   padding-left: 10px;
+  margin: 10px 10px;
+
   text-align: left;
 }
 
@@ -47,7 +51,6 @@
 
 .Howitworks .light {
   border-radius: 10px;
-
   background: #f4f3f5;
   padding: 80px 10px;
 }
@@ -55,5 +58,22 @@
 .Howitworks .dark {
   border-radius: 10px;
   background: #f4bdb5;
+  padding: 80px 10px;
+}
+
+.Howitworks .swap-section {
+  background: #f1d18e;
+  padding: 300px 0;
+}
+
+.Howitworks .light-swap {
+  border-radius: 10px;
+  background: #eddfc0;
+  padding: 80px 10px;
+}
+
+.Howitworks .dark-swap {
+  border-radius: 10px;
+  background: #eabf6f;
   padding: 80px 10px;
 }
