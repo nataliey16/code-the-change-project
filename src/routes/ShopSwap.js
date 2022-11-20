@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./ShopSwap.css";
 import "bulma/css/bulma.css";
-import ShopGlasses from "./images/shop-glasses.jpg";
 import Dropdown from "react-bootstrap/Dropdown";
 
 export default function ShopSwap() {
@@ -190,7 +189,7 @@ export default function ShopSwap() {
             <div className="row shop-glasses">
               <div className="col-lg-6">
                 <img
-                  src={ShopGlasses}
+                  src={glass.image}
                   alt="Glasses"
                   className="img-fluid"
                 ></img>
@@ -247,7 +246,7 @@ export default function ShopSwap() {
                         <u>Distance</u>
                       </b>
                     </div>
-                    <div>{glass.notes}</div>
+                    <div>{glass.distance}</div>
                   </div>
                   <div className="col-lg-4">
                     <div>
@@ -255,7 +254,7 @@ export default function ShopSwap() {
                         <u>Price</u>
                       </b>
                     </div>
-                    <div>{glass.price}</div>
+                    <div>${glass.price}</div>
                   </div>
                   <div className="col-lg-4 mt-3">
                     <button>View</button>
