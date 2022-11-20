@@ -63,18 +63,20 @@ export default function ShopSwap() {
         </h1>
         <p>Shop for afforable glasses near you</p>
       </div>
-      <br />
+      <h2 className="text-center">Enter your measurements</h2>
+
       <div className="shop-details">
         <div
           style={{
             width: "55%",
-            paddingTop: "40px",
-            paddingBottom: "40px",
-            marginLeft: "10%",
-            textAlign: "left",
+            paddingTop: "70px",
+            paddingBottom: "70px",
+            marginBottom: "30px",
+            marginLeft: "330px",
+            textAlign: "center",
           }}
         >
-          <h2 className="title">Prescription</h2>
+          <h3 className="title">Prescription</h3>
 
           <div className="field">
             <label className="label">Sphere</label>
@@ -129,7 +131,7 @@ export default function ShopSwap() {
             </div>
           </div>
 
-          <h2 className="title">Glasses Frames</h2>
+          <h3 className="title">Glasses Frames</h3>
 
           <div className="field">
             <label className="label">Bridge (mm)</label>
@@ -193,10 +195,10 @@ export default function ShopSwap() {
       {glasses.map(function (glass, idx) {
         return (
           <div
-            className="card"
+            className="group-results"
             style={{ width: "80%", margin: "auto", marginTop: "40px" }}
           >
-            <div className="row shop-glasses">
+            <div className="row individual-results">
               <div className="col-lg-6">
                 <img
                   src={ShopGlasses}
