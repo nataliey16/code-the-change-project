@@ -6,6 +6,7 @@ import Howitworks from "./routes/Howitworks";
 import Mission from "./routes/Mission";
 import ShopSwap from "./routes/ShopSwap";
 import Account from "./routes/Account";
+import View from "./routes/View"
 
 import Upload from "./routes/Upload";
 
@@ -67,6 +68,7 @@ function App() {
         <Route path="/Mission" element={<Mission />}></Route>
         <Route path="/Account" element={<Account />}></Route>
         <Route path="/Upload" element={<Upload />}></Route>
+        <Route path="/View" element={<View />}></Route>
       </Routes>
     </div>
   );

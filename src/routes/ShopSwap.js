@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./ShopSwap.css";
 import "bulma/css/bulma.css";
 import Dropdown from "react-bootstrap/Dropdown";
+import {useNavigate } from 'react-router-dom';
 
 export default function ShopSwap() {
   const [glasses, setGlasses] = useState([{}]);
@@ -16,6 +17,8 @@ export default function ShopSwap() {
   const [bridge, setBridge] = useState("24");
   const [lens, setLens] = useState("53");
   const [temple, setTemple] = useState("155");
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     fetch("/eyewear")
@@ -270,7 +273,20 @@ export default function ShopSwap() {
                     <div>${glass.price}</div>
                   </div>
                   <div className="col-lg-4 mt-3">
-                    <button>View</button>
+                    <button onClick={() => {
+                      navigate('/View',{
+                        state: {glass: glass, yours: {
+                          ipdLeft: ipdLeft,
+                          ipdRight: ipdRight,
+                          sphereLeft: sphereLeft,
+                          sphereRight: sphereRight,
+                          bridge: bridge,
+                          lens: lens,
+                          temple: temple
+                        },
+                      similarity: similarityInputted}
+                      })
+                    }}>View</button>
                   </div>
                 </div>
               </div>

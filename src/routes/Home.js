@@ -45,7 +45,7 @@ export default function Home() {
       <div className="footer">
         <footer>
           <i className="fa-solid fa-glasses footer-icon"></i>
-          <button className="btn btn-branding">Contast us</button>
+          <button className="btn btn-branding">Contact us</button>
         </footer>
       </div>
     </div>

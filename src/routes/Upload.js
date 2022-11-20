@@ -35,7 +35,7 @@ export default function Upload() {
           <div class="container has-text-centered">
             <div class="columns is-8 is-variable ">
               <div class="column is-two-thirds has-text-left">
-                <h1 class="title is-1">Upload a Glasses</h1>
+                <h1 class="title is-1">Upload a Glass</h1>
                 <p class="is-size-4">
                   By donating your Glasses, you are helping another family out
                   there.{" "}
@@ -158,6 +158,18 @@ export default function Upload() {
                           placeholder="../images/4.jpg"
                           style={{ width: "50%" }}
                           name="image"
+                        ></input>
+                      </div>
+                    </div>
+
+                    <div class="field">
+                      <label class="label">Location</label>
+                      <div class="control">
+                        <input
+                          class="input"
+                          placeholder="Superstore"
+                          style={{ width: "50%" }}
+                          name="location"
                         ></input>
                       </div>
                     </div>

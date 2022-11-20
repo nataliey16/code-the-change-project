@@ -72,7 +72,7 @@ def eyewear():
 @app.route("/uploadGlasses", methods=["POST"])
 def uploadGlasses():
 	db.session.add(EyeWear(sphereLeft = float(request.form.get('sphereLeft')), sphereRight= float(request.form.get('sphereRight')),
-    ipdLeft=float(request.form.get('ipdLeft')),ipdRight=float(request.form.get('ipdRight')),bridge=float(request.form.get('bridge')),lens=float(request.form.get('lens')),temple=float(request.form.get('temple')),distance="3km away", notes=request.form.get('notes'), image=request.form.get('image'), price=float(request.form.get('price'))))
+    ipdLeft=float(request.form.get('ipdLeft')),ipdRight=float(request.form.get('ipdRight')),bridge=float(request.form.get('bridge')),lens=float(request.form.get('lens')),temple=float(request.form.get('temple')),distance="3km away", notes=request.form.get('notes'), image=request.form.get('image'), price=float(request.form.get('price')), location=request.form.get('location')))
 	resp = jsonify(success=True)
 	db.session.commit()
 	return resp

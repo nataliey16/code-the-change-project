@@ -15,6 +15,7 @@ class EyeWear(db.Model):
     price = db.Column(db.Float, nullable=False)
     distance = db.Column(db.String(300))
     image = db.Column(db.String(300))
+    location = db.Column(db.String(300))
 
 
 class Post(db.Model):
@@ -61,7 +62,7 @@ class EyeWearShema(ma.Schema):
     class Meta:
         # Fields to expose
         fields = ("id","sphereLeft", "sphereRight", "ipdLeft", "ipdRight"
-        ,"bridge", "lens", "temple", "notes", "price", "distance", "image")
+        ,"bridge", "lens", "temple", "notes", "price", "distance", "image", "location")
 class PostShema(ma.Schema):
     class Meta:
         # Fields to expose
@@ -82,9 +83,9 @@ def create_posts(*args, **kwargs):
 @event.listens_for(EyeWear.__table__, 'after_create')
 def create_eyewear(*args, **kwargs):
     db.session.add(EyeWear(id=1, sphereLeft = -1.00, sphereRight= -1.50,
-    ipdLeft=32.0,ipdRight=32.0,bridge=22,lens=49,temple=150,distance="3km away", notes="Very fancy frames", image="../images/shop-glasses.jpg", price=4.99))
+    ipdLeft=32.0,ipdRight=32.0,bridge=22,lens=49,temple=150,distance="3km away", notes="Very fancy frames", image="../images/shop-glasses.jpg", location="Library", price=4.99))
     db.session.add(EyeWear(id=2, sphereLeft = -1.50, sphereRight= -2.00,
-    ipdLeft=30.0,ipdRight=32.0,bridge=25,lens=55,temple=152,distance="2km away", notes="My head grew :(",image="../images/shop-glasses2.jpg", price=9.99))
+    ipdLeft=30.0,ipdRight=32.0,bridge=25,lens=55,temple=152,distance="2km away", notes="My head grew :(",image="../images/shop-glasses2.jpg", location="University", price=9.99))
     db.session.commit()
 @event.listens_for(User.__table__, 'after_create')
 def create_users(*args, **kwargs):
