@@ -11,8 +11,6 @@
   padding: 30px 40px;
 }
 
-
-
 .ShopSwap .glasses-detail {
   margin: 100px 0;
 }
@@ -53,7 +51,6 @@
   background: #f5b36a;
 }
 
-.Home .shop-swap-preview {
-  background: linear-gradient(90deg, pink 50%, #b3d2cd 50%);
-  padding: 100px 0;
+.ShopSwap .group-results {
+  background: #b3b975;
 }
