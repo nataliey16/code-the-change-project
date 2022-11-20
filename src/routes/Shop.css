@@ -1,4 +1,8 @@
-.ShopSwap .background-img {
+.Shop {
+  padding: 0;
+}
+
+.Shop .background-img {
   background-image: url("images/shop-glasses1.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -6,16 +10,16 @@
   height: 800px;
   max-width: 100%;
 }
-.ShopSwap .individual-results {
+.Shop .individual-results {
   margin: 10px 0;
   padding: 30px 40px;
 }
 
-.ShopSwap .glasses-detail {
+.Shop .glasses-detail {
   margin: 100px 0;
 }
-.ShopSwap h1 {
-  color: #22437c;
+.Shop h1 {
+  color: #142d4c;
   font-family: "Abril Fatface", cursive;
   font-size: 100px;
   font-weight: 300;
@@ -25,32 +29,33 @@
   text-align: left;
 }
 
-.ShopSwap h2 {
-  color: #22437c;
+.Shop h2 {
+  color: #142d4c;
   font-family: "Abril Fatface", cursive;
   font-size: 40px;
   font-weight: 300;
   margin: 30px 0;
 }
 
-.ShopSwap small {
+.Shop small {
   font-size: 70px;
 }
 
-.ShopSwap p {
+.Shop p {
   font-family: "Roboto Mono", monospace;
   text-align: left;
   font-size: 30px;
   padding-left: 30px;
 }
-.ShopSwap img {
+.Shop img {
   border-radius: 10px;
 }
 
-.ShopSwap .shop-details {
+.Shop .shop-details {
   background: #f5b36a;
 }
 
-.ShopSwap .group-results {
+.Shop .group-results {
   background: #b3b975;
+  border-radius: 10px;
 }
