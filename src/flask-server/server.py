@@ -2,6 +2,7 @@ from flask import current_app,jsonify,request
 from app import create_app,db
 from models import Articles, EyeWear, Post, User,articles_schema, users_schema,user_schema, eyewears_schema, posts_schema
 from eyewearSimilarity import *
+import json
 
 # Create an application instance
 app = create_app()
@@ -65,11 +66,18 @@ def eyewear():
 			eye1 = EyeWearInformation(glassDict["sphereLeft"],glassDict["sphereRight"],glassDict["ipdLeft"] + glassDict["ipdRight"],glassDict["lens"],glassDict["bridge"],glassDict["temple"])
 			eye2 = EyeWearInformation(float(request.get_json()["sphereLeft"]),float(request.get_json()["sphereRight"]),float(request.get_json()["ipdLeft"]) + float(request.get_json()["ipdRight"]),float(request.get_json()["lens"]),float(request.get_json()["bridge"]),float(request.get_json()["temple"]))
 			glassDict["similarity"] = SimilarityOfEyewear(eye1, eye2)
+			del glassDict["_sa_instance_state"]
 			glassDictList.append(glassDict)
 			print(glassDict)
-		print(glassDictList)
-		return jsonify(glassDictList)
+		return json.dumps(glassDictList)
 
+@app.route("/uploadGlasses", methods=["POST"])
+def uploadGlasses():
+	db.session.add(EyeWear(sphereLeft = float(request.form.get('sphereLeft')), sphereRight= float(request.form.get('sphereRight')),
+    ipdLeft=float(request.form.get('ipdLeft')),ipdRight=float(request.form.get('ipdRight')),bridge=float(request.form.get('bridge')),lens=float(request.form.get('lens')),temple=float(request.form.get('temple')),notes="3km away", price=9.99))
+	resp = jsonify(success=True)
+	db.session.commit()
+	return resp
 @app.route("/posts", methods=["GET"], strict_slashes=False)
 def posts():
 	#🐔

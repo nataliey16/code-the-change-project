@@ -1,0 +1,39 @@
+.Home .how-it-works {
+  background: #b1b968;
+  padding: 300px 0;
+}
+
+.Home h1 {
+  color: #22437c;
+  font-family: "Abril Fatface", cursive;
+  font-size: 100px;
+  font-weight: 100;
+  margin-top: 0;
+  text-align: center;
+}
+
+.Home h2 {
+  color: #22437c;
+  font-family: "Abril Fatface", cursive;
+  font-size: 100px;
+  font-weight: 100;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.Home p {
+  font-family: "Roboto Mono", monospace;
+}
+
+.Home i {
+  margin: 0 20px;
+}
+
+.Home .shop-swap-preview {
+  background: linear-gradient(90deg, pink 50%, #b3d2cd 50%);
+  padding: 100px 0;
+}
+
+.Home img {
+  max-width: 80%;
+}

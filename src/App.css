@@ -5,9 +5,9 @@
   font-family: "Raleway", sans-serif;
 }
 
-.App img {
-  max-width: 15em;
-  height: auto;
+.App i {
+  font-size: 40px;
+  color: #22437c;
 }
 
 .App ul {
@@ -28,7 +28,6 @@
   text-decoration: none;
   transition: all 100ms ease-in-out;
 }
-
 
 .App a:hover {
   opacity: 0.5;

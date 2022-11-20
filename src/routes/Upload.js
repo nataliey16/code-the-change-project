@@ -14,6 +14,21 @@ export default function Upload(){
             console.log(data);
           });
       }, []);
+
+    const uploadSubmit = ((e) => {
+        e.preventDefault();
+        const data = new FormData(e.target)
+        for (var [key, value] of data.entries()) { 
+            console.log(key, value);
+        }
+        fetch("/uploadGlasses", {
+            method: "POST",
+            body: data,
+          })
+            .then((res) => res.json())
+            .then((json) => window.location.href = '/ShopSwap');
+            
+    })
     return(
         <div>
         <section class="hero is-fullheight">
@@ -24,23 +39,23 @@ export default function Upload(){
 						<h1 class="title is-1">Upload a Glasses</h1>
 						<p class="is-size-4">By donating your Glasses, you are helping another family out there. </p>
                         
-                        
+                        <form onSubmit={uploadSubmit}>
                         <div style={{width:"55%", marginLeft:"10%",marginTop:"40px"}}>
                             <h1 class="title">Prescription</h1>
 
                             <div class="field">
                             <label class="label">Sphere</label>
                             <div class="control">
-                            <input class="input" type="number" placeholder="Left Sphere" style={{width:"50%"}}></input>
-                            <input class="input" type="number" placeholder="Right Sphere" style={{width:"50%"}}></input>
+                            <input class="input" type="number" step=".01" placeholder="Left Sphere" name="sphereLeft" style={{width:"50%"}}></input>
+                            <input class="input" type="number" step=".01" placeholder="Right Sphere" name="sphereRight" style={{width:"50%"}}></input>
                             </div>
                             </div>
 
                             <div class="field">
                             <label class="label">IPD</label>
                             <div class="control">
-                                <input class="input" type="number" placeholder="Left IPD" style={{width:"50%"}}></input>
-                                <input class="input" type="number" placeholder="Right IPD" style={{width:"50%"}}></input>
+                                <input class="input" type="number" step=".01" placeholder="Left IPD" name="ipdLeft" style={{width:"50%"}}></input>
+                                <input class="input" type="number" step=".01" placeholder="Right IPD" name="ipdRight" style={{width:"50%"}}></input>
                             </div>
                             </div>
 
@@ -50,21 +65,21 @@ export default function Upload(){
                             <div class="field">
                             <label class="label">Bridge (mm)</label>
                             <div class="control">
-                                <input class="input" type="number" placeholder="75" style={{width:"50%"}}></input>
+                                <input class="input" type="number" placeholder="75" style={{width:"50%"}} name="bridge"></input>
                             </div>
                             </div>
 
                             <div class="field">
                             <label class="label">Lens (mm)</label>
                             <div class="control">
-                                <input class="input" type="number" placeholder="45" style={{width:"50%"}}></input>
+                                <input class="input" type="number" placeholder="45" style={{width:"50%"}} name="lens"></input>
                             </div>
                             </div>
 
                             <div class="field">
                             <label class="label">Temple (mm)</label>
                             <div class="control">
-                                <input class="input" type="number" placeholder="50" style={{width:"50%"}}></input>
+                                <input class="input" type="number" placeholder="50" style={{width:"50%"}} name="temple"></input>
                             </div>
                             </div>
 
@@ -78,30 +93,16 @@ export default function Upload(){
                             <div class="field">
                             <div class="control">
                                 <label class="checkbox">
-                                <input type="checkbox"></input>
-                                 I agree to the <a href="#">terms and conditions</a>
+                                <input type="checkbox"></input> 
+                                  I agree to the <a href="#">terms and conditions</a>
                                 </label>
                             </div>
                             </div>
-
-                            <div class="field">
                             <div class="control">
-                                <label class="radio">
-                                <input type="radio" name="question"></input>
-                                Yes
-                                </label>
-                                <label class="radio">
-                                <input type="radio" name="question"></input>
-                                No
-                                </label>
-                            </div>
-                            </div>
-
-                            <div class="control">
-                                <button class="button is-link">Submit</button>
+                                <button class="button is-link" type="submit">Submit</button>
                             </div>
                         </div>
-
+                        </form>
 					</div>
                     <div class="card row-alt" style={{border:"none"}}>
                         <div class="card-content">
