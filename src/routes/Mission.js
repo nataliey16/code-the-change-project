@@ -6,9 +6,9 @@ export default function Mission() {
         <h1>
           A Sustainable
           <br />
-          way to get
+          way to find
           <br />
-          The Glasses.
+          your Glasses.
         </h1>
       </div>
       <div className="card" style={{ border: "none" }}>

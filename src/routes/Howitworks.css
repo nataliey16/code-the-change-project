@@ -1,3 +1,59 @@
-.Howitworks form {
-  width: 400px;
+.Howitworks .background-img {
+  background-image: url("images/how-it-works.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 800px;
+  max-width: 100%;
+}
+
+.Howitworks h1 {
+  color: #142d4c;
+  font-family: "Abril Fatface", cursive;
+  font-size: 100px;
+  font-weight: 300;
+  padding-top: 300px;
+  padding-right: 10px;
+  text-align: right;
+}
+
+.Howitworks h2 {
+  color: #142d4c;
+  font-family: "Abril Fatface", cursive;
+  font-size: 30px;
+  font-weight: 10;
+  padding-left: 10px;
+  text-align: left;
+}
+
+.Howitworks p {
+  color: #142d4c;
+  font-family: "Roboto Mono", monospace;
+  font-size: 20px;
+  padding-left: 10px;
+  text-align: left;
+}
+
+.Howitworks .shop-section {
+  background: #ecd5db;
+  padding: 300px 0;
+}
+
+.Howitworks .shop-steps {
+  font-size: 20px;
+  padding: 10px 10px;
+  margin: 10px 10px;
+}
+
+.Howitworks .light {
+  border-radius: 10px;
+
+  background: #f4f3f5;
+  padding: 80px 10px;
+}
+
+.Howitworks .dark {
+  border-radius: 10px;
+  background: #f4bdb5;
+  padding: 80px 10px;
 }

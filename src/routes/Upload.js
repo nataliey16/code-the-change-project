@@ -30,21 +30,23 @@ export default function Upload() {
   };
   return (
     <div className="Upload">
-      <h1>
-        <small>Swap or Donate</small>
-        <br />
-        The Glasses.
-      </h1>
+      <div className="swap-banner">
+        <h1>
+          <small>Swap or Donate</small>
+          <br />
+          The Glasses.
+        </h1>
+        <p className="is-size-5">
+          By swapping or donating your Glasses, you are giving someone healthier
+          vision and reducing waste in our landfills.{" "}
+        </p>
+      </div>
       <section class="hero is-fullheight">
         <div class="hero-body">
           <div class="container has-text-centered">
             <div class="columns is-8 is-variable ">
               <div class="column is-two-thirds has-text-left">
                 <h2 class="title is-1">Upload a pair of Glasses</h2>
-                <p class="is-size-4">
-                  By swapping or donating your Glasses, you are giving someone
-                  healthier vision and reducing one less frame in our landfills.{" "}
-                </p>
 
                 <form onSubmit={uploadSubmit}>
                   <div
@@ -160,7 +162,7 @@ export default function Upload() {
                       </div>
                     </div>
                     <div class="control">
-                      <button class="button is-link" type="submit">
+                      <button class="button btn btn-branding" type="submit">
                         Submit
                       </button>
                     </div>
