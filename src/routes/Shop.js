@@ -84,10 +84,15 @@ export default function Shop() {
           <h3 className="title">Prescription</h3>
 
           <div className="field">
-            <span className="label" style={{display:"inline-block"}}>Sphere (Left, Right)&nbsp;</span>  
+            <span className="label" style={{ display: "inline-block" }}>
+              Sphere (Left, Right)&nbsp;
+            </span>
             <div className="help-tip">
-              <span>This is your main prescription number. Take our test to estimate it!</span>
-          </div>
+              <span>
+                This is your main prescription number. Take our test to estimate
+                it!
+              </span>
+            </div>
             <div className="control">
               <input
                 className="input"
@@ -115,9 +120,15 @@ export default function Shop() {
           </div>
 
           <div className="field">
-            <span className="label" style={{display:"inline-block"}}>IPD&nbsp;</span><div className="help-tip">
-              <span>This the distance between your eyes. Eyeglass stores will measure this for free.</span>
-          </div>
+            <span className="label" style={{ display: "inline-block" }}>
+              IPD&nbsp;
+            </span>
+            <div className="help-tip">
+              <span>
+                This the distance between your eyes. Eyeglass stores will
+                measure this for free.
+              </span>
+            </div>
             <div className="control">
               <input
                 className="input"
@@ -145,8 +156,15 @@ export default function Shop() {
             </div>
           </div>
 
-          <h3 className="title mt-5" style={{display:"inline-block"}}>Glasses Frames&nbsp;</h3><div className="help-tip">
-              <span>You can try on glasses at an eyeglass store or dollar store to find your best fit. These are the three numbers on the inside of any glasses frame.</span>
+          <h3 className="title mt-5" style={{ display: "inline-block" }}>
+            Glasses Frames&nbsp;
+          </h3>
+          <div className="help-tip">
+            <span>
+              You can try on glasses at an eyeglass store or dollar store to
+              find your best fit. These are the three numbers on the inside of
+              any glasses frame.
+            </span>
           </div>
 
           <div className="field">
