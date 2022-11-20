@@ -57,8 +57,6 @@ def eyewear():
 		print(jsonify(results))
 		return jsonify(results)
 	else:
-		print('hi')
-		print(request.get_json())
 		eyewear = EyeWear.query.all()
 		glassDictList = []
 		for glass in eyewear:
@@ -74,7 +72,7 @@ def eyewear():
 @app.route("/uploadGlasses", methods=["POST"])
 def uploadGlasses():
 	db.session.add(EyeWear(sphereLeft = float(request.form.get('sphereLeft')), sphereRight= float(request.form.get('sphereRight')),
-    ipdLeft=float(request.form.get('ipdLeft')),ipdRight=float(request.form.get('ipdRight')),bridge=float(request.form.get('bridge')),lens=float(request.form.get('lens')),temple=float(request.form.get('temple')),notes="3km away", price=9.99))
+    ipdLeft=float(request.form.get('ipdLeft')),ipdRight=float(request.form.get('ipdRight')),bridge=float(request.form.get('bridge')),lens=float(request.form.get('lens')),temple=float(request.form.get('temple')),distance="3km away", notes=request.form.get('notes'), image=request.form.get('image'), price=float(request.form.get('price'))))
 	resp = jsonify(success=True)
 	db.session.commit()
 	return resp
@@ -82,10 +80,8 @@ def uploadGlasses():
 def posts():
 	#🐔
 	posts = Post.query.all()
-	print(posts[0].__dict__)
 	
 	results = posts_schema.dump(posts)
-	print(results)
 	return (Post.query.first().description)
 
 if __name__ == "__main__":

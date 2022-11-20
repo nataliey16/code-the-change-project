@@ -137,9 +137,35 @@ export default function Upload() {
                     </div>
 
                     <div class="field">
+                      <label class="label">Price</label>
+                      <div class="control">
+                        <input
+                          class="input"
+                          type="number"
+                          step=".01"
+                          placeholder="14.99"
+                          style={{ width: "50%" }}
+                          name="price"
+                        ></input>
+                      </div>
+                    </div>
+
+                    <div class="field">
+                      <label class="label">Image URL</label>
+                      <div class="control">
+                        <input
+                          class="input"
+                          placeholder="../images/4.jpg"
+                          style={{ width: "50%" }}
+                          name="image"
+                        ></input>
+                      </div>
+                    </div>
+
+                    <div class="field">
                       <label class="label">Notes</label>
                       <div class="control">
-                        <textarea
+                        <textarea name="notes"
                           class="textarea"
                           placeholder="The glasses are smugged on the right lenses..."
                         ></textarea>
