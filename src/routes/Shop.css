@@ -12,7 +12,8 @@
 }
 
 .Shop .glasses-detail {
-  margin: 100px 0;
+  margin-top: 80px;
+  margin-bottom: 80px;
 }
 .Shop h1 {
   color: #142d4c;
@@ -64,12 +65,10 @@
   transition: all 100ms ease-in-out;
 }
 
-.Shop .dropdown-btn:hover {
-  background: #142d4c;
-}
-
 .Shop img {
+  max-width: 100%;
   border-radius: 10px;
+  border: 10px solid white;
 }
 
 .Shop .shop-details {
@@ -78,11 +77,48 @@
 
 .Shop .group-results {
   background: #bed1a0;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 .Shop .individual-results {
-  font-size: 25px;
+  font-size: 20px;
+  font-family: "Roboto Mono", monospace;
   margin: 10px 0;
   padding: 30px 40px;
+  padding-right: 50px;
+}
+
+.Shop .first-img {
+  margin-top: 110px;
+}
+
+.Shop .light {
+  display: block;
+  margin: 0 auto;
+  border: 1px solid white;
+  background: #e0e9d8;
+}
+
+.Shop .dark {
+  border: 1px solid white;
+  background: #c6d5c6;
+}
+
+.Shop .dark-view {
+  background: #142d4c;
+  border: 1px solid white;
+}
+
+.Shop .view-btn {
+  font-family: "Roboto Mono", monospace;
+  background: #142d4c;
+  border: none;
+  padding: 50px 40px;
+  color: white;
+  transition: all 100ms ease-in-out;
+  text-decoration: underline;
+}
+
+.Shop .view-btn:hover {
+  opacity: 0.6;
 }

@@ -5,7 +5,7 @@ import Home from "./routes/Home";
 import Howitworks from "./routes/Howitworks";
 import Mission from "./routes/Mission";
 import Account from "./routes/Account";
-import View from "./routes/View"
+import View from "./routes/View";
 
 import Shop from "./routes/Shop";
 import Upload from "./routes/Upload";
@@ -17,6 +17,7 @@ function App() {
         <div className="container-fluid">
           <a href="/" title="home-page">
             <i className="fa-solid fa-glasses"></i>
+            <h1>Pass The Glass</h1>
           </a>
           <button
             className="navbar-toggler"

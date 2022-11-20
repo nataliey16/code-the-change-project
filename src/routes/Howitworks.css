@@ -52,12 +52,14 @@
 .Howitworks .light {
   border-radius: 10px;
   background: #f4f3f5;
+  font-family: "Roboto Mono", monospace;
   padding: 80px 10px;
 }
 
 .Howitworks .dark {
   border-radius: 10px;
   background: #f4bdb5;
+  font-family: "Roboto Mono", monospace;
   padding: 80px 10px;
 }
 
@@ -69,12 +71,14 @@
 .Howitworks .light-swap {
   border-radius: 10px;
   background: #eddfc0;
+  font-family: "Roboto Mono", monospace;
   padding: 80px 10px;
 }
 
 .Howitworks .dark-swap {
   border-radius: 10px;
   background: #eabf6f;
+  font-family: "Roboto Mono", monospace;
   padding: 80px 10px;
 }
 

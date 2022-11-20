@@ -7,12 +7,19 @@
   max-width: 100%;
 }
 
+.HomeBanner i {
+  position: absolute;
+  top: 200px;
+  left: 670px;
+  text-align: center;
+  font-size: 80px;
+}
 .HomeBanner h1 {
   color: #142d4c;
   font-family: "Abril Fatface", cursive;
   font-size: 100px;
   font-weight: 300;
-  padding-top: 200px;
+  padding-top: 160px;
   text-align: center;
 }
 

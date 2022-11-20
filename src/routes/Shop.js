@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./Shop.css";
 import "bulma/css/bulma.css";
 import Dropdown from "react-bootstrap/Dropdown";
-import {useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 
 export default function Shop() {
   const [glasses, setGlasses] = useState([{}]);
@@ -218,7 +218,7 @@ export default function Shop() {
                   <img
                     src={glass.image}
                     alt="Glasses"
-                    className="img-fluid"
+                    className="first-img img-fluid"
                   ></img>
                   {glass.similarity ? (
                     <div
@@ -237,26 +237,31 @@ export default function Shop() {
                 </div>
                 <div className="col-lg-6 glasses-detail">
                   <div className="row">
-                    <div className="col-lg-4">
+                    <div className="col-lg-4 light p-5">
                       <div>
+                        <br />
                         <b>
                           <u>Sphere</u>
                         </b>
                       </div>
                       <div>Left: {glass.sphereLeft}</div>
                       <div>Right: {glass.sphereRight}</div>
+                      <br />
                     </div>
-                    <div className="col-lg-4">
+                    <div className="col-lg-4 dark p-5">
                       <div>
+                        <br />
                         <b>
                           <u>IPD</u>
                         </b>
                       </div>
                       <div>Left: {glass.ipdLeft}</div>
                       <div>Right: {glass.ipdRight}</div>
+                      <br />
                     </div>
-                    <div className="col-lg-4">
+                    <div className="col-lg-4 light pt-4">
                       <div>
+                        <br />
                         <b>
                           <u>Frame</u>
                         </b>
@@ -266,39 +271,52 @@ export default function Shop() {
                       <div>Temple: {glass.temple}</div>
                     </div>
                   </div>
-                    
-                  <div className="row">
-                    <div className="col-lg-4">
+
+                  <div className="row ">
+                    <div className="col-lg-4 dark">
                       <div>
+                        <br />
+                        <br />
                         <b>
                           <u>Distance</u>
                         </b>
                       </div>
                       <div>{glass.distance}</div>
+                      <br />
                     </div>
-                    <div className="col-lg-4">
+                    <div className="col-lg-4 light">
                       <div>
+                        <br />
+                        <br />
                         <b>
                           <u>Price</u>
                         </b>
                       </div>
                       <div>${glass.price}</div>
                     </div>
-                    <div className="col-lg-4 mt-3">
-                    <button onClick={() => {
-                      navigate('/View',{
-                        state: {glass: glass, yours: {
-                          ipdLeft: ipdLeft,
-                          ipdRight: ipdRight,
-                          sphereLeft: sphereLeft,
-                          sphereRight: sphereRight,
-                          bridge: bridge,
-                          lens: lens,
-                          temple: temple
-                        },
-                      similarity: similarityInputted}
-                      })
-                    }}>View</button>
+                    <div className="col-lg-4 p-5 dark-view">
+                      <button
+                        className="view-btn"
+                        onClick={() => {
+                          navigate("/View", {
+                            state: {
+                              glass: glass,
+                              yours: {
+                                ipdLeft: ipdLeft,
+                                ipdRight: ipdRight,
+                                sphereLeft: sphereLeft,
+                                sphereRight: sphereRight,
+                                bridge: bridge,
+                                lens: lens,
+                                temple: temple,
+                              },
+                              similarity: similarityInputted,
+                            },
+                          });
+                        }}
+                      >
+                        View
+                      </button>
                     </div>
                   </div>
                 </div>
