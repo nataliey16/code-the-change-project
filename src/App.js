@@ -8,6 +8,7 @@ import ShopSwap from './routes/ShopSwap';
 import Account from './routes/Account';
 
 import TheHatchText from "./routes/images/The Hatch Finals_Text Only_small.png";
+import Upload from './routes/Upload';
 
 
 function App() {
@@ -51,6 +52,11 @@ function App() {
                 </Link>
               </li>
               <li>
+                <Link to="/Upload" className="nav-link active">
+                  Upload Glasses
+                </Link>
+              </li>
+              <li>
                 <Link to="/Account" className="nav-link active">
                   Account
                 </Link>
@@ -66,6 +72,7 @@ function App() {
         <Route path="/ShopSwap" element={<ShopSwap/>}></Route>
         <Route path="/Mission" element={<Mission />}></Route>
         <Route path="/Account" element={<Account />}></Route>
+        <Route path="/Upload" element={<Upload />}></Route>
       </Routes>      
   
     </div>
