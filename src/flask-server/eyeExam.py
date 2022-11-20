@@ -7,7 +7,7 @@ def getScoresFromInput(input):
     print("this is the input",input)
     
     if input == "":
-        return "I couldn't quite catch that, try again"
+        return "I couldn't catch that, try again"
     arr = input.split(" ")
     answer = [r,d,r,u,r,u,r,l,d,u,r,d,l,u,d,l,d,l,u,r,l,l,d,d,d,r,u,r,d,u,r,d,u,r,d,r,d,u,l,r,d,u,r]
     answerIndex = 0

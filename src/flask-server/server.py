@@ -62,7 +62,7 @@ def exam():
 		
 		with sr.AudioFile('new.wav') as source:
 			r.adjust_for_ambient_noise(source)
-			audio_text = r.listen(source, timeout=None)
+			audio_text = r.listen(source, timeout=500)
 			print(audio_text)
 			try:
 				result = r.recognize_google(audio_text,language="en")
