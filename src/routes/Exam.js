@@ -74,9 +74,6 @@ export default class Exam extends React.Component {
                           Visual Acuity Test
 
                       </h1>
-                      <h2 class="subtitle">
-                          Read Aloud the letters on the Snellen Chart!
-                      </h2>
                   </div>
               </div>
           </section>
@@ -125,21 +122,20 @@ export default class Exam extends React.Component {
               </div>
           </section>
 
-          <img src={SnellenChart}></img>
+          <img src={SnellenChart} style={{marginTop:"25px"}}></img>
 
           <section class="row-alt  is-info welcome is-small" style={{width:"80%", margin:"auto", borderRadius: "25px"}}>
           <div class="hero-body">
-                  <div class="container">
-                      <h1 class="subtitle">
-                          Your Results in 20/20 measure is:
-
-                      </h1>
+                  <div class="container" style={{lineHeight:"40px"}}>
                       <h2 class="title">
+                          <b>Your 20/20 measure is:</b>
+                          <br></br>
                           {
                             this.result.test ? <p>{this.result.test}</p>: <p>Take a test to see your results!</p>
                           }
                       </h2>
-                      <table class="table">
+
+                      <table class="table" style={{marginLeft:"40px"}}>
                       <thead>
                           <tr>
                             <th>20/20 Measure</th>
