@@ -64,9 +64,10 @@ export default function Shop() {
         </h1>
         <p>Shop sustainable glasses</p>
       </div>
-      <h2 className="text-center">Enter your measurements</h2>
 
       <div className="shop-details">
+        <h2 className="text-center">Enter your measurements</h2>
+
         <div
           style={{
             width: "55%",
@@ -132,7 +133,7 @@ export default function Shop() {
             </div>
           </div>
 
-          <h3 className="title">Glasses Frames</h3>
+          <h3 className="title mt-5">Glasses Frames</h3>
 
           <div className="field">
             <label className="label">Bridge (mm)</label>
@@ -178,24 +179,28 @@ export default function Shop() {
               ></input>
             </div>
           </div>
-          <button className="button is-link" onClick={refreshGlasses}>
-            Refresh
+          <button
+            className="refresh-button btn btn-branding"
+            onClick={refreshGlasses}
+          >
+            Search
           </button>
         </div>
       </div>
-      <br></br>
-      <Dropdown onSelect={sortSelected}>
-        <Dropdown.Toggle variant="success">
-          Sorted by: {sortStyle.charAt(0).toUpperCase() + sortStyle.slice(1)}
-        </Dropdown.Toggle>
-        <Dropdown.Menu>
-          <Dropdown.Item>Distance</Dropdown.Item>
-          <Dropdown.Item>Price</Dropdown.Item>
-          {similarityInputted ? (
-            <Dropdown.Item>Similarity</Dropdown.Item>
-          ) : null}
-        </Dropdown.Menu>
-      </Dropdown>
+      <div style={{ marginRight: "66%" }}>
+        <Dropdown onSelect={sortSelected}>
+          <Dropdown.Toggle className="dropdown-btn" variant="success">
+            Sorted by: {sortStyle.charAt(0).toUpperCase() + sortStyle.slice(1)}
+          </Dropdown.Toggle>
+          <Dropdown.Menu>
+            <Dropdown.Item>Distance</Dropdown.Item>
+            <Dropdown.Item>Price</Dropdown.Item>
+            {similarityInputted ? (
+              <Dropdown.Item>Similarity</Dropdown.Item>
+            ) : null}
+          </Dropdown.Menu>
+        </Dropdown>
+      </div>
 
       {glasses
         .sort((a, b) => (a[sortStyle] > b[sortStyle] ? 1 : -1))
