@@ -10,7 +10,7 @@
 .Mission h1 {
   color: #142d4c;
   font-family: "Abril Fatface", cursive;
-  font-size: 80px;
+  font-size: 70px;
   font-weight: 100;
   padding: 10px 10px;
   text-align: left;
@@ -27,10 +27,25 @@
   font-family: "Abril Fatface", cursive;
   font-size: 50px;
   font-weight: 100;
-  margin: 30px 0;
+  padding-bottom: 20px;
+  margin: 10px 0;
   text-align: center;
 }
 
 .Mission p {
   font-family: "Roboto Mono", monospace;
+}
+
+.Mission .impact {
+  margin: 10px 50px;
+  padding: 200px 0;
+  text-align: left;
+}
+
+.Mission .title-impact {
+  color: #142d4c;
+  font-family: "Abril Fatface", cursive;
+  font-size: 50px;
+  font-weight: 100;
+  text-align: left;
 }

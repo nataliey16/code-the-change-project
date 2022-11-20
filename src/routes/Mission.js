@@ -4,7 +4,7 @@ export default function Mission() {
     <div className="Mission">
       <div className="background-img">
         <h1>
-          A Cleaner
+          A Sustainable
           <br />
           way to get
           <br />
@@ -63,10 +63,23 @@ export default function Mission() {
             <article className="tile is-child box">
               <i class="fa-solid fa-seedling"></i>
               <p className="title"> Environment</p>
-              <p className="subtitle">Add fact here</p>
+              <p className="subtitle">
+                Our eyewear generally only lasts us a few years at most, leading
+                to millions of frames ending up in landfills every year.{" "}
+              </p>
             </article>
           </div>
         </footer>
+      </div>
+      <div className="impact">
+        <div className="title-impact">Who We Are</div>
+        <p className="subtitle">
+          We at Pass the Glass offer a sustainable and affordable way to find
+          the perfect pair of glasses for you. We prioritze healthly vision for
+          everyone while minimizing the impacts of cost and accessibility. We
+          are also committed to protecting our planet by reducing millions of
+          glasses that end up in our landfills and produce pollution.
+        </p>
       </div>
     </div>
   );
