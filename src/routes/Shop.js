@@ -84,29 +84,31 @@ export default function Shop() {
           <h3 className="title">Prescription</h3>
 
           <div className="field">
-            <span className="label" style={{display:"inline-block"}}>Sphere&nbsp;</span>  
+            <span className="label" style={{display:"inline-block"}}>Sphere (Left, Right)&nbsp;</span>  
             <div className="help-tip">
               <span>This is your main prescription number. Take our test to estimate it!</span>
           </div>
             <div className="control">
               <input
                 className="input"
+                name="sphereLeft"
                 type="number"
                 placeholder="Left Sphere"
                 onChange={(event) => {
-                  setSphereRight(event.target.value);
+                  setSphereLeft(event.target.value);
                 }}
                 style={{ width: "50%" }}
-                defaultValue="-1.75"
+                defaultValue="-1.00"
               ></input>
               <input
                 className="input"
                 type="number"
+                name="sphereRight"
                 placeholder="Right Sphere"
                 onChange={(event) => {
-                  setIpdRight(event.target.value);
+                  setSphereRight(event.target.value);
                 }}
-                defaultValue="33.0"
+                defaultValue="-1.75"
                 style={{ width: "50%" }}
               ></input>
             </div>
@@ -121,10 +123,11 @@ export default function Shop() {
                 className="input"
                 type="number"
                 placeholder="Left IPD"
+                name="ipdLeft"
                 onChange={(event) => {
-                  setSphereLeft(event.target.value);
+                  setIpdLeft(event.target.value);
                 }}
-                defaultValue="-1.00"
+                defaultValue="31.0"
                 style={{ width: "50%" }}
               ></input>
 
@@ -132,10 +135,11 @@ export default function Shop() {
                 className="input"
                 type="number"
                 placeholder="Right IPD"
+                name="ipdRight"
                 onChange={(event) => {
-                  setIpdLeft(event.target.value);
+                  setIpdRight(event.target.value);
                 }}
-                defaultValue="31.0"
+                defaultValue="33.0"
                 style={{ width: "50%" }}
               ></input>
             </div>
@@ -151,6 +155,7 @@ export default function Shop() {
               <input
                 className="input"
                 type="number"
+                name="bridge"
                 onChange={(event) => {
                   setBridge(event.target.value);
                 }}
@@ -166,6 +171,7 @@ export default function Shop() {
               <input
                 className="input"
                 type="number"
+                name="lens"
                 onChange={(event) => {
                   setLens(event.target.value);
                 }}
@@ -181,6 +187,7 @@ export default function Shop() {
               <input
                 className="input"
                 type="number"
+                name="temple"
                 onChange={(event) => {
                   setTemple(event.target.value);
                 }}
