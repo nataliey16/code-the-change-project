@@ -1,10 +1,11 @@
-import "./Account.css";
-import 'bulma/css/bulma.css'
+
+import "./Exam.css";
 import { Recorder } from "react-voice-recorder";
-import "react-voice-recorder/dist/index.css";
 import SnellenChart from "./images/chart.png";
+import "react-voice-recorder/dist/index.css";
 
 import React, { useState, useEffect } from "react";
+import "react-voice-recorder/dist/index.css";
 
 export default class Exam extends React.Component {
     
@@ -192,6 +193,7 @@ export default class Exam extends React.Component {
             record={true}
             audioURL={this.state.audioDetails.url}
             showUIAudio
+            
             handleAudioStop={(data) => this.handleAudioStop(data)}
             handleAudioUpload={(data) => this.handleAudioUpload(data)}
             handleRest={() => this.handleRest()}
