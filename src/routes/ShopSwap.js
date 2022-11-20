@@ -56,122 +56,128 @@ export default function ShopSwap() {
   return (
     <div className="ShopSwap container-fluid">
       <div className="background-img">
-        <h2>Shop: Shop N Swap</h2>
+        <h1>
+          <small>Shop</small>
+          The Glass
+        </h1>
+        <p>Shop for afforable glasses near you</p>
       </div>
       <br />
-      <div
-        style={{
-          width: "55%",
-          marginLeft: "10%",
-          marginTop: "40px",
-          marginBottom: "40px",
-          textAlign: "left",
-        }}
-      >
-        <h1 className="title">Prescription</h1>
+      <div className="shop-details">
+        <div
+          style={{
+            width: "55%",
+            paddingTop: "40px",
+            paddingBottom: "40px",
+            marginLeft: "10%",
+            textAlign: "left",
+          }}
+        >
+          <h2 className="title">Prescription</h2>
 
-        <div className="field">
-          <label className="label">Sphere</label>
-          <div className="control">
-            <input
-              className="input"
-              type="number"
-              placeholder="Left Sphere"
-              onChange={(event) => {
-                setSphereRight(event.target.value);
-              }}
-              style={{ width: "50%" }}
-              defaultValue="-1.75"
-            ></input>
-            <input
-              className="input"
-              type="number"
-              placeholder="Right Sphere"
-              onChange={(event) => {
-                setIpdRight(event.target.value);
-              }}
-              defaultValue="33.0"
-              style={{ width: "50%" }}
-            ></input>
+          <div className="field">
+            <label className="label">Sphere</label>
+            <div className="control">
+              <input
+                className="input"
+                type="number"
+                placeholder="Left Sphere"
+                onChange={(event) => {
+                  setSphereRight(event.target.value);
+                }}
+                style={{ width: "50%" }}
+                defaultValue="-1.75"
+              ></input>
+              <input
+                className="input"
+                type="number"
+                placeholder="Right Sphere"
+                onChange={(event) => {
+                  setIpdRight(event.target.value);
+                }}
+                defaultValue="33.0"
+                style={{ width: "50%" }}
+              ></input>
+            </div>
           </div>
-        </div>
 
-        <div className="field">
-          <label className="label">IPD</label>
-          <div className="control">
-            <input
-              className="input"
-              type="number"
-              placeholder="Left IPD"
-              onChange={(event) => {
-                setSphereLeft(event.target.value);
-              }}
-              defaultValue="-1.00"
-              style={{ width: "50%" }}
-            ></input>
+          <div className="field">
+            <label className="label">IPD</label>
+            <div className="control">
+              <input
+                className="input"
+                type="number"
+                placeholder="Left IPD"
+                onChange={(event) => {
+                  setSphereLeft(event.target.value);
+                }}
+                defaultValue="-1.00"
+                style={{ width: "50%" }}
+              ></input>
 
-            <input
-              className="input"
-              type="number"
-              placeholder="Right IPD"
-              onChange={(event) => {
-                setIpdLeft(event.target.value);
-              }}
-              defaultValue="31.0"
-              style={{ width: "50%" }}
-            ></input>
+              <input
+                className="input"
+                type="number"
+                placeholder="Right IPD"
+                onChange={(event) => {
+                  setIpdLeft(event.target.value);
+                }}
+                defaultValue="31.0"
+                style={{ width: "50%" }}
+              ></input>
+            </div>
           </div>
-        </div>
 
-        <h1 className="title">Glasses Frames</h1>
+          <h2 className="title">Glasses Frames</h2>
 
-        <div className="field">
-          <label className="label">Bridge (mm)</label>
-          <div className="control">
-            <input
-              className="input"
-              type="number"
-              onChange={(event) => {
-                setBridge(event.target.value);
-              }}
-              defaultValue="24"
-              style={{ width: "50%" }}
-            ></input>
+          <div className="field">
+            <label className="label">Bridge (mm)</label>
+            <div className="control">
+              <input
+                className="input"
+                type="number"
+                onChange={(event) => {
+                  setBridge(event.target.value);
+                }}
+                defaultValue="24"
+                style={{ width: "50%" }}
+              ></input>
+            </div>
           </div>
-        </div>
 
-        <div className="field">
-          <label className="label">Lens (mm)</label>
-          <div className="control">
-            <input
-              className="input"
-              type="number"
-              onChange={(event) => {
-                setLens(event.target.value);
-              }}
-              defaultValue="49"
-              style={{ width: "50%" }}
-            ></input>
+          <div className="field">
+            <label className="label">Lens (mm)</label>
+            <div className="control">
+              <input
+                className="input"
+                type="number"
+                onChange={(event) => {
+                  setLens(event.target.value);
+                }}
+                defaultValue="49"
+                style={{ width: "50%" }}
+              ></input>
+            </div>
           </div>
-        </div>
 
-        <div className="field">
-          <label className="label">Temple (mm)</label>
-          <div className="control">
-            <input
-              className="input"
-              type="number"
-              onChange={(event) => {
-                setTemple(event.target.value);
-              }}
-              defaultValue="150"
-              style={{ width: "50%" }}
-            ></input>
+          <div className="field">
+            <label className="label">Temple (mm)</label>
+            <div className="control">
+              <input
+                className="input"
+                type="number"
+                onChange={(event) => {
+                  setTemple(event.target.value);
+                }}
+                defaultValue="150"
+                style={{ width: "50%" }}
+              ></input>
+            </div>
           </div>
+          <button className="button is-link" onClick={refreshGlasses}>
+            Refresh
+          </button>
         </div>
-        <button className="button is-link" onClick={refreshGlasses}>
-          Refresh
-        </button>
       </div>
 
       <Dropdown>
@@ -185,7 +191,10 @@ export default function ShopSwap() {
 
       {glasses.map(function (glass, idx) {
         return (
-          <div className="card" style={{ width: "80%", margin: "auto" }}>
+          <div
+            className="card"
+            style={{ width: "80%", margin: "auto", marginTop: "40px" }}
+          >
             <div className="row shop-glasses">
               <div className="col-lg-6">
                 <img

@@ -13,14 +13,15 @@
   font-size: 100px;
   font-weight: 300;
   margin-top: 0;
-  padding-top: 100px;
+  padding-top: 300px;
   text-align: center;
 }
 
 .HomeBanner small {
-  font-size: 40px;
+  font-size: 70px;
 }
 
 .HomeBanner p {
   font-family: "Roboto Mono", monospace;
+  font-size: 30px;
 }

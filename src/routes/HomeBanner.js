@@ -9,7 +9,7 @@ export default function HomeBanner() {
           <small>Pass</small>
           The Glass
         </h1>
-        <p>Shop N Swap your pair of Glasses</p>
+        <p>Shop, Swap, or Donate your pair of glasses</p>
       </div>
     </div>
   );
