@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
-import "./ShopSwap.css";
+import "./Shop.css";
 import "bulma/css/bulma.css";
 import Dropdown from "react-bootstrap/Dropdown";
 import {useNavigate } from 'react-router-dom';
 
-export default function ShopSwap() {
+export default function Shop() {
   const [glasses, setGlasses] = useState([{}]);
   const [similarityInputted, setSimilarityInputted] = useState(false);
   const [sortStyle, setSortStyle] = useState("distance");
@@ -55,21 +55,22 @@ export default function ShopSwap() {
   };
 
   const sortSelected = (e, k) => {
-    setSortStyle(k.target.innerHTML.toLowerCase())
+    setSortStyle(k.target.innerHTML.toLowerCase());
   };
 
   return (
-    <div className="ShopSwap container-fluid">
+    <div className="Shop container-fluid">
       <div className="background-img">
         <h1>
           <small>Shop</small>
           The Glass
         </h1>
-        <p>Shop for afforable glasses near you</p>
+        <p>Shop sustainable glasses</p>
       </div>
-      <h2 className="text-center">Enter your measurements</h2>
 
       <div className="shop-details">
+        <h2 className="text-center">Enter your measurements</h2>
+
         <div
           style={{
             width: "55%",
@@ -135,7 +136,7 @@ export default function ShopSwap() {
             </div>
           </div>
 
-          <h3 className="title">Glasses Frames</h3>
+          <h3 className="title mt-5">Glasses Frames</h3>
 
           <div className="field">
             <label className="label">Bridge (mm)</label>
@@ -181,98 +182,109 @@ export default function ShopSwap() {
               ></input>
             </div>
           </div>
-          <button className="button is-link" onClick={refreshGlasses}>
-            Refresh
+          <button
+            className="refresh-button btn btn-branding"
+            onClick={refreshGlasses}
+          >
+            Search
           </button>
         </div>
       </div>
-                <br></br>
-      <Dropdown onSelect={sortSelected}>
-        <Dropdown.Toggle variant="success">Sorted by: {sortStyle.charAt(0).toUpperCase() + sortStyle.slice(1)}</Dropdown.Toggle>
-        <Dropdown.Menu>
-          <Dropdown.Item>Distance</Dropdown.Item>
-          <Dropdown.Item>Price</Dropdown.Item>
-          { similarityInputted ? <Dropdown.Item>Similarity</Dropdown.Item> : null }
-        </Dropdown.Menu>
-      </Dropdown>
+      <div style={{ marginRight: "66%" }}>
+        <Dropdown onSelect={sortSelected}>
+          <Dropdown.Toggle className="dropdown-btn" variant="success">
+            Sorted by: {sortStyle.charAt(0).toUpperCase() + sortStyle.slice(1)}
+          </Dropdown.Toggle>
+          <Dropdown.Menu>
+            <Dropdown.Item>Distance</Dropdown.Item>
+            <Dropdown.Item>Price</Dropdown.Item>
+            {similarityInputted ? (
+              <Dropdown.Item>Similarity</Dropdown.Item>
+            ) : null}
+          </Dropdown.Menu>
+        </Dropdown>
+      </div>
 
-      {glasses.sort((a, b) => a[sortStyle] > b[sortStyle] ? 1 : -1).map(function (glass, idx) {
-        return (
-          <div
-            className="group-results"
-            style={{ width: "80%", margin: "auto", marginTop: "40px" }}
-          >
-            <div className="row individual-results">
-              <div className="col-lg-6">
-                <img
-                  src={glass.image}
-                  alt="Glasses"
-                  className="img-fluid"
-                ></img>
-                {glass.similarity ? (
-                  <div
-                    className="row"
-                    style={{
-                      textAlign: "center",
-                      width: "100%",
-                      fontSize: "20px",
-                    }}
-                  >
-                    <div className="col-xs-12">
-                      Match: {100 - Math.round(glass.similarity * 100)}%
+      {glasses
+        .sort((a, b) => (a[sortStyle] > b[sortStyle] ? 1 : -1))
+        .map(function (glass, idx) {
+          return (
+            <div
+              className="group-results"
+              style={{ width: "80%", margin: "auto", marginTop: "40px" }}
+            >
+              <div className="row individual-results">
+                <div className="col-lg-6">
+                  <img
+                    src={glass.image}
+                    alt="Glasses"
+                    className="img-fluid"
+                  ></img>
+                  {glass.similarity ? (
+                    <div
+                      className="row"
+                      style={{
+                        textAlign: "center",
+                        width: "100%",
+                        fontSize: "20px",
+                      }}
+                    >
+                      <div className="col-xs-12">
+                        Match: {100 - Math.round(glass.similarity * 100)}%
+                      </div>
                     </div>
-                  </div>
-                ) : null}
-              </div>
-              <div className="col-lg-6 glasses-detail">
-                <div className="row">
-                  <div className="col-lg-4">
-                    <div>
-                      <b>
-                        <u>Sphere</u>
-                      </b>
-                    </div>
-                    <div>Left: {glass.sphereLeft}</div>
-                    <div>Right: {glass.sphereRight}</div>
-                  </div>
-                  <div className="col-lg-4">
-                    <div>
-                      <b>
-                        <u>IPD</u>
-                      </b>
-                    </div>
-                    <div>Left: {glass.ipdLeft}</div>
-                    <div>Right: {glass.ipdRight}</div>
-                  </div>
-                  <div className="col-lg-4">
-                    <div>
-                      <b>
-                        <u>Frame</u>
-                      </b>
-                    </div>
-                    <div>Bridge: {glass.bridge}</div>
-                    <div>Lens: {glass.lens}</div>
-                    <div>Temple: {glass.temple}</div>
-                  </div>
+                  ) : null}
                 </div>
-                <div className="row">
-                  <div className="col-lg-4">
-                    <div>
-                      <b>
-                        <u>Distance</u>
-                      </b>
+                <div className="col-lg-6 glasses-detail">
+                  <div className="row">
+                    <div className="col-lg-4">
+                      <div>
+                        <b>
+                          <u>Sphere</u>
+                        </b>
+                      </div>
+                      <div>Left: {glass.sphereLeft}</div>
+                      <div>Right: {glass.sphereRight}</div>
                     </div>
-                    <div>{glass.distance}</div>
-                  </div>
-                  <div className="col-lg-4">
-                    <div>
-                      <b>
-                        <u>Price</u>
-                      </b>
+                    <div className="col-lg-4">
+                      <div>
+                        <b>
+                          <u>IPD</u>
+                        </b>
+                      </div>
+                      <div>Left: {glass.ipdLeft}</div>
+                      <div>Right: {glass.ipdRight}</div>
                     </div>
-                    <div>${glass.price}</div>
+                    <div className="col-lg-4">
+                      <div>
+                        <b>
+                          <u>Frame</u>
+                        </b>
+                      </div>
+                      <div>Bridge: {glass.bridge}</div>
+                      <div>Lens: {glass.lens}</div>
+                      <div>Temple: {glass.temple}</div>
+                    </div>
                   </div>
-                  <div className="col-lg-4 mt-3">
+                    
+                  <div className="row">
+                    <div className="col-lg-4">
+                      <div>
+                        <b>
+                          <u>Distance</u>
+                        </b>
+                      </div>
+                      <div>{glass.distance}</div>
+                    </div>
+                    <div className="col-lg-4">
+                      <div>
+                        <b>
+                          <u>Price</u>
+                        </b>
+                      </div>
+                      <div>${glass.price}</div>
+                    </div>
+                    <div className="col-lg-4 mt-3">
                     <button onClick={() => {
                       navigate('/View',{
                         state: {glass: glass, yours: {
@@ -287,13 +299,13 @@ export default function ShopSwap() {
                       similarity: similarityInputted}
                       })
                     }}>View</button>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        );
-      })}
+          );
+        })}
     </div>
   );
 }

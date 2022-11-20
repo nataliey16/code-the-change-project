@@ -1,0 +1,88 @@
+.Shop {
+  padding: 0;
+}
+
+.Shop .background-img {
+  background-image: url("images/shop-glasses1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 800px;
+  max-width: 100%;
+}
+
+.Shop .glasses-detail {
+  margin: 100px 0;
+}
+.Shop h1 {
+  color: #142d4c;
+  font-family: "Abril Fatface", cursive;
+  font-size: 100px;
+  font-weight: 300;
+  margin-top: 0;
+  padding-top: 30px;
+  padding-left: 30px;
+  text-align: left;
+}
+
+.Shop h2 {
+  color: #142d4c;
+  font-family: "Abril Fatface", cursive;
+  font-size: 50px;
+  font-weight: 300;
+  padding: 50px 0 5px 0;
+}
+
+.Shop small {
+  font-size: 70px;
+}
+
+.Shop p {
+  font-family: "Roboto Mono", monospace;
+  text-align: left;
+  font-size: 30px;
+  padding-left: 30px;
+}
+
+.Shop .btn-branding {
+  background: #142d4c;
+  padding: 10px 25px;
+  margin-top: 40px;
+  color: white;
+  transition: all 100ms ease-in-out;
+}
+
+.Shop .btn-branding:hover {
+  opacity: 0.6;
+}
+
+.Shop .dropdown-btn {
+  background: #142d4c;
+  padding: 10px 25px;
+  margin-top: 10px;
+  color: white;
+  transition: all 100ms ease-in-out;
+}
+
+.Shop .dropdown-btn:hover {
+  background: #142d4c;
+}
+
+.Shop img {
+  border-radius: 10px;
+}
+
+.Shop .shop-details {
+  background: #efecda;
+}
+
+.Shop .group-results {
+  background: #bed1a0;
+  border-radius: 10px;
+}
+
+.Shop .individual-results {
+  font-size: 25px;
+  margin: 10px 0;
+  padding: 30px 40px;
+}

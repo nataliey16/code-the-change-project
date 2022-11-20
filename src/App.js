@@ -4,10 +4,10 @@ import { Link, Route, Routes } from "react-router-dom";
 import Home from "./routes/Home";
 import Howitworks from "./routes/Howitworks";
 import Mission from "./routes/Mission";
-import ShopSwap from "./routes/ShopSwap";
 import Account from "./routes/Account";
 import View from "./routes/View"
 
+import Shop from "./routes/Shop";
 import Upload from "./routes/Upload";
 
 function App() {
@@ -32,28 +32,29 @@ function App() {
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav">
               <li>
-                <Link to="/" className="nav-link active">
-                  Home
-                </Link>
-              </li>
-              <li>
                 <Link to="/Howitworks" className="nav-link active">
                   How it Works
                 </Link>
               </li>
               <li>
-                <Link to="/ShopSwap" className="nav-link active">
-                  Shop N Swap
+                <Link to="/Mission" className="nav-link active">
+                  Mission
+                </Link>
+              </li>
+              <li>
+                <Link to="/Shop" className="nav-link active">
+                  Shop
                 </Link>
               </li>
               <li>
                 <Link to="/Upload" className="nav-link active">
-                  Upload Glasses
+                  Donate N Swap
                 </Link>
               </li>
+
               <li>
                 <Link to="/Account" className="nav-link active">
-                  Account
+                  <i className="nav-icon fa-solid fa-user"></i>
                 </Link>
               </li>
             </ul>
@@ -64,8 +65,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />}></Route>
         <Route path="/Howitworks" element={<Howitworks />}></Route>
-        <Route path="/ShopSwap" element={<ShopSwap />}></Route>
         <Route path="/Mission" element={<Mission />}></Route>
+        <Route path="/Shop" element={<Shop />}></Route>
         <Route path="/Account" element={<Account />}></Route>
         <Route path="/Upload" element={<Upload />}></Route>
         <Route path="/View" element={<View />}></Route>

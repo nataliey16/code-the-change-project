@@ -29,17 +29,24 @@ export default function Upload() {
       .then((json) => (window.location.href = "/ShopSwap"));
   };
   return (
-    <div>
+    <div className="Upload">
+      <div className="swap-banner">
+        <h1>
+          <small>Donate or Swap</small>
+          <br />
+          The Glasses
+        </h1>
+        <p className="is-size-5">
+          By donating and/or swapping your Glasses, you are giving someone a
+          healthier vision and reducing waste in our landfills.{" "}
+        </p>
+      </div>
       <section class="hero is-fullheight">
         <div class="hero-body">
           <div class="container has-text-centered">
             <div class="columns is-8 is-variable ">
               <div class="column is-two-thirds has-text-left">
-                <h1 class="title is-1">Upload a Glass</h1>
-                <p class="is-size-4">
-                  By donating your Glasses, you are helping another family out
-                  there.{" "}
-                </p>
+                <h2 class="title is-1">Upload a Glass</h2>
 
                 <form onSubmit={uploadSubmit}>
                   <div
@@ -49,7 +56,7 @@ export default function Upload() {
                       marginTop: "40px",
                     }}
                   >
-                    <h1 class="title">Prescription</h1>
+                    <h2 class="title">Prescription</h2>
 
                     <div class="field">
                       <label class="label">Sphere</label>
@@ -95,7 +102,7 @@ export default function Upload() {
                       </div>
                     </div>
 
-                    <h1 class="title">Glasses Frames</h1>
+                    <h2 class="title">Glasses Frames</h2>
 
                     <div class="field">
                       <label class="label">Bridge (mm)</label>
@@ -187,24 +194,25 @@ export default function Upload() {
                     <div class="field">
                       <div class="control">
                         <label class="checkbox">
-                          <input type="checkbox"></input>I agree to the{" "}
+                          <input type="checkbox"></input> I agree to the{" "}
                           <a href="#">terms and conditions</a>
                         </label>
                       </div>
                     </div>
                     <div class="control">
-                      <button class="button is-link" type="submit">
+                      <button class="button btn btn-branding" type="submit">
                         Submit
                       </button>
                     </div>
                   </div>
                 </form>
               </div>
-              <div class="card row-alt" style={{ border: "none" }}>
+              <div class="card background-img" style={{ border: "none" }}>
                 <div class="card-content">
-                  <p class="title">Did you know that?</p>
+                  {/* <p class="title">Did you know that?</p> */}
+                  <p class="title"></p>
                 </div>
-                <footer
+                {/* <footer
                   class=""
                   style={{
                     borderWidth: "7px",
@@ -254,7 +262,7 @@ export default function Upload() {
                       <p class="subtitle">is the average cost of new glasses</p>
                     </article>
                   </div>
-                </footer>
+                </footer> */}
               </div>
             </div>
           </div>
