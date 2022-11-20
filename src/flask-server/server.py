@@ -65,7 +65,7 @@ def eyewear():
 			glassDict = glass.__dict__
 			eye1 = EyeWearInformation(glassDict["sphereLeft"],glassDict["sphereRight"],glassDict["ipdLeft"] + glassDict["ipdRight"],glassDict["lens"],glassDict["bridge"],glassDict["temple"])
 			eye2 = EyeWearInformation(float(request.get_json()["sphereLeft"]),float(request.get_json()["sphereRight"]),float(request.get_json()["ipdLeft"]) + float(request.get_json()["ipdRight"]),float(request.get_json()["lens"]),float(request.get_json()["bridge"]),float(request.get_json()["temple"]))
-			glassDict["similarity"] = SimilarityOfEyewear(eye1, eye2)
+			glassDict["similarity"] = 1 - SimilarityOfEyewear(eye1, eye2)
 			del glassDict["_sa_instance_state"]
 			glassDictList.append(glassDict)
 			print(glassDict)
