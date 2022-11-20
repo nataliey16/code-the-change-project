@@ -36,8 +36,7 @@ export default function Howitworks() {
         </div>
       </section>
       <section className="swap-section">
-        <h2>Swap or Donate the Glasses</h2>
-        <p>Need an upgrade? Swap!</p>
+        <h2>Donate the Glasses</h2>
         <p>Not sure what to do with your old glasses? Donate!</p>
         <div className="row shop-steps">
           <div className="col-md-4 light-swap">
@@ -57,6 +56,14 @@ export default function Howitworks() {
             Your glasses are awaiting their new owner!
           </div>
         </div>
+        <h2 className="mt-5">Swap the Glasses</h2>
+        <p>
+          Need an upgrade? Swap!
+          <ul>
+            <li>1. Donate first</li>
+            <li>2. Then select Shop to shop!</li>
+          </ul>
+        </p>
       </section>
     </div>
   );

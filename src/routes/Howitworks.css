@@ -40,7 +40,7 @@
 
 .Howitworks .shop-section {
   background: #ecd5db;
-  padding: 300px 0;
+  padding: 200px 0;
 }
 
 .Howitworks .shop-steps {
@@ -63,7 +63,7 @@
 
 .Howitworks .swap-section {
   background: #f1d18e;
-  padding: 300px 0;
+  padding: 200px 0;
 }
 
 .Howitworks .light-swap {
@@ -76,4 +76,9 @@
   border-radius: 10px;
   background: #eabf6f;
   padding: 80px 10px;
+}
+
+.Howitworks li {
+  display: flex;
+  flex-direction: column;
 }

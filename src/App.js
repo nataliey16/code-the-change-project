@@ -5,9 +5,9 @@ import Home from "./routes/Home";
 import Howitworks from "./routes/Howitworks";
 import Mission from "./routes/Mission";
 import Shop from "./routes/Shop";
+import Upload from "./routes/Upload";
 import Account from "./routes/Account";
 
-import Upload from "./routes/Upload";
 
 function App() {
   return (
@@ -47,7 +47,7 @@ function App() {
               </li>
               <li>
                 <Link to="/Upload" className="nav-link active">
-                  Swap or Donate
+                  Donate N Swap
                 </Link>
               </li>
 
